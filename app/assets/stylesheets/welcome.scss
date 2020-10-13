@@ -1,3 +1,29 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+:root {
+  --main-yellow: #FFD401;
+  --main-black: #222222;
+  --main-grey: #F1F1F1;
+  --main-white: #000000;
+}
+
+span {
+  width: 310px;
+  height: 90px;
+  border-radius: 100px;
+  background: var(--main-grey);
+}
+
+.header {
+  height: 100vh;
+  background: var(--main-yellow);
+  text-align: center;
+}
+
+.header h1 {
+  font-family: sans-serif;
+  font-size: 50px;
+  width: 80vw;
+}
