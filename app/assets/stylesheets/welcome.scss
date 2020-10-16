@@ -5,23 +5,17 @@
 
 
 
+
 :root {
   --main-yellow: #FFD401;
   --main-black: #222222;
   --main-grey: #F1F1F1;
-  --main-white: #000000;
+  --main-white: #FFFFFF;
 }
 
 body {
   background: var(--main-grey);
   overflow-x: hidden;
-}
-
-span {
-  width: 310px;
-  height: 90px;
-  border-radius: 100px;
-  background: var(--main-grey);
 }
 
 .header {
@@ -32,17 +26,49 @@ span {
 }
 
 .header {
-    h1 {
-      font-family: 'Inter';
-      font-weight: bold;
-      font-size: 50px;
-      width: 80vw;
+  h1 {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 50px;
+    width: 80vw;
+    line-height: 1.6;
 
-      position: absolute;
-      top: 40vh;
-      left: 50vw;
-      transform: translate(-50%, -50%);
-    }
+    position: absolute;
+    top: 40vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin span-emj {
+
+  // height: 90px;
+  border-radius: 100px;
+  background: var(--main-white);
+  padding: 4px 30px 10px 20px;
+
+}
+
+span {
+  @include span-emj ;
+}
+
+
+@mixin emj-style {
+  height: 45px;
+  vertical-align: middle;
+}
+
+.emj__meet {
+  @include emj-style;
+}
+
+.emj__peanuts{
+  @include emj-style;
+}
+
+.emj__milk{
+  @include emj-style;
 }
 
 .background_main {
