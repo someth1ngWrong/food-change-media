@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :posts
   get 'about/index'
-	get 'welcome/index'
+  get 'posts/index'
 
-	root 'welcome#index'
+  root 'posts#index'
 end
