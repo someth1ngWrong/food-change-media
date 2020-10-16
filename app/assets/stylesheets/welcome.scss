@@ -1,10 +1,9 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-@font-face {
-  font-family: 'Inter';
-  src: font-url('../fonts/Inter-Bold.ttf') format('truetype');
-}
+
+
+
 
 :root {
   --main-yellow: #FFD401;
@@ -35,6 +34,7 @@ span {
 .header {
     h1 {
       font-family: 'Inter';
+      font-weight: bold;
       font-size: 50px;
       width: 80vw;
 
