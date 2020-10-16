@@ -32,25 +32,39 @@ span {
   border-radius: 0px 0px 70px 70px;
 }
 
-.header h1 {
-  font-family: 'Inter';
-  font-size: 50px;
-  width: 80vw;
+.header {
+    h1 {
+      font-family: 'Inter';
+      font-size: 50px;
+      width: 80vw;
 
-  position: absolute;
-  top: 40vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+      position: absolute;
+      top: 40vh;
+      left: 50vw;
+      transform: translate(-50%, -50%);
+    }
 }
 
-.main {
+.background_main {
+  background: var(--main-black);
+}
+
+main {
   height: 100vh;
+  border-radius: 0px 0px 70px 70px;
   background: var(--main-grey);
 }
 
-.main h2 {
-  font-family: 'Inter';
-  font-weight: bold;
+main {
+    h2 {
+      font-family: 'Inter';
+      font-weight: bold;
+    }
+}
+
+footer {
+  height: 100vh;
+  background: var(--main-black);
 }
 
 
