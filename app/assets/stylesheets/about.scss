@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .section__one {
   background: var(--main-yellow);
+  font-family: "Inter";
+  font-weight: bold;
 }
 
 header {
@@ -14,8 +16,6 @@ header {
 
   h1 {
     width: 60vw;
-    font-family: "Inter";
-    font-weight: bold;
     font-size: 34px;
     line-height: 150%;
 
@@ -35,9 +35,8 @@ header {
   position: relative;
   height: 100vh;
   border-radius: 0 0 70px 70px;
-  
+
   h4 {
-    font-weight: bold;
     font-size: 60px;
 
     position: absolute;
@@ -50,6 +49,11 @@ header {
     display: flex;
     flex-flow: row;
     margin-left: 20vw;
+
+    position: absolute;
+    top: 35vh;
+
+
 
       .main__card__one,
       .main__card__two {
