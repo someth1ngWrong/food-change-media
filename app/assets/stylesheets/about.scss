@@ -1,3 +1,96 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.section__one {
+  background: var(--main-yellow);
+}
+
+header {
+  height: 90vh;
+  border-radius: 0 0 70px 70px;
+
+  background: var(--main-grey);
+
+
+  h1 {
+    width: 60vw;
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 150%;
+
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+  }
+
+  span {
+    padding: 8px 14px;
+    color: var(--main-grey);
+    background: var(--main-black);
+  }
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  border-radius: 0 0 70px 70px;
+  
+  h4 {
+    font-weight: bold;
+    font-size: 60px;
+
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+  }
+  background: var(--main-yellow);
+
+  .main__card {
+    display: flex;
+    flex-flow: row;
+    margin-left: 20vw;
+
+      .main__card__one,
+      .main__card__two {
+        width: 430px;
+        height: 280px;
+        border-radius: 20px;
+        margin-right: 110px;
+
+        background: var(--main-grey);
+
+          h5 {
+            font-size: 40px;
+            font-weight: bold;
+            padding: 36px 40px;
+          }
+
+          p {
+            font-size: 20px;
+            font-weight: 400;
+            padding: 24px 40px;
+            line-height: 142%;
+          }
+      }
+  }
+}
+
+.section__two {
+  background: var(--main-black);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// /
