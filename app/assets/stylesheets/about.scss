@@ -35,7 +35,7 @@ header {
   position: relative;
   height: 100vh;
   border-radius: 0 0 70px 70px;
-  
+
   h4 {
     font-weight: bold;
     font-size: 60px;
@@ -78,6 +78,11 @@ header {
 
 .section__two {
   background: var(--main-black);
+
+  .main__two {
+    height: 100vh;
+    background: var(--main-black);
+  }
 }
 
 
