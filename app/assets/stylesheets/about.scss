@@ -34,16 +34,18 @@ header {
 .main {
   position: relative;
   height: 100vh;
+  z-index: 3;
+
   border-radius: 0 0 70px 70px;
-
-  h4 {
-    font-size: 60px;
-
-    position: absolute;
-    top: 20vh;
-    left: 20vw;
-  }
   background: var(--main-yellow);
+
+    h4 {
+      font-size: 60px;
+
+      position: absolute;
+      top: 25vh;
+      left: 20vw;
+    }
 
   .main__card {
     display: flex;
@@ -71,7 +73,7 @@ header {
           }
 
           p {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: 400;
             padding: 24px 40px;
             line-height: 142%;
@@ -81,11 +83,134 @@ header {
 }
 
 .section__two {
-  background: var(--main-black);
+  background: var(--main-grey);
+  font-family: "Inter";
+  font-weight: bold;
 
   .main__two {
-    height: 100vh;
+    height: 110vh;
+    transform: translateY(-10vh);
+
     background: var(--main-black);
+    border-radius: 0 0 70px 70px;
+
+    h4 {
+      font-size: 60px;
+      width: 40vw;
+      line-height: 122%;
+
+      position: absolute;
+      top: 33vh;
+      left: 20vw;
+      color: var(--main-grey);
+    }
+
+    .main__two__p {
+      position: absolute;
+      top: 56vh;
+      margin-left: 20vw;
+    }
+
+    p {
+      font-size: 24px;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+
+      border-radius: 30px;
+      color: var(--main-black);
+      background: var(--main-grey);
+    }
+  }
+
+  .main__three {
+    height: 100vh;
+    position: relative;
+    border-radius: 0 0 70px 70px;
+    z-index: 2;
+
+    background: var(--main-grey);
+
+      h4 {
+        font-size: 60px;
+        width: 40vw;
+        line-height: 122%;
+
+        position: absolute;
+        top: 15vh;
+        left: 20vw;
+        color: var(--main-black);
+      }
+
+      p {
+        font-family: "Inter";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 142%;
+
+        position: absolute;
+        top: 30vh;
+        width: 50vw;
+
+        margin-left: 20vw;
+        color: var(--main-black);
+      }
+
+      .main__three__card_one {
+        position: absolute;
+        width: 120vw;
+        bottom: 15vh;
+
+          span {
+            font-size: 80px;
+            padding: 1%;
+
+
+            margin-left: 30px;
+            color: var(--main-grey);
+            background: var(--main-black);
+          }
+
+            .img__main__three__card {
+              width: 54px;
+            }
+      }
+
+      .main__three__card_two {
+        position: absolute;
+        width: 120vw;
+        bottom: 35vh;
+
+          span {
+            font-size: 80px;
+            padding: 1%;
+
+
+            margin-left: 30px;
+            color: var(--main-grey);
+            background: var(--main-black);
+          }
+
+            .img__main__three__card {
+              width: 54px;
+            }
+      }
+  }
+}
+.section__three {
+
+  .main__four {
+    height: 115vh;
+    transform: translateY(-10vh);
+
+    border-radius: 0 0 70px 70px;
+    background: var(--main-yellow);
+
+    .img__phone {
+      width: 500px;
+      position: absolute;
+      bottom: 0;
+      right: 15vw;
+    }
   }
 }
 
