@@ -1,5 +1,5 @@
 require_relative 'boot'
-config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+# config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 
 require 'rails/all'
 # config.assets.enabled = true
