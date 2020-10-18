@@ -13,6 +13,10 @@ header {
 
   background: var(--main-grey);
 
+  .header__img {
+    height: 24px;
+  }
+
 
   h1 {
     width: 60vw;
@@ -20,7 +24,7 @@ header {
     line-height: 150%;
 
     position: absolute;
-    top: 10vh;
+    top: 15vh;
     left: 10vw;
   }
 
@@ -28,6 +32,7 @@ header {
     padding: 8px 14px;
     color: var(--main-grey);
     background: var(--main-black);
+    vertical-align: middle;
   }
 }
 
@@ -53,14 +58,14 @@ header {
     margin-left: 15vw;
 
     position: absolute;
-    top: 35vh;
+    top: 38vh;
 
 
 
       .main__card__one,
       .main__card__two {
-        width: 430px;
-        height: 280px;
+        width: 480px;
+        height: 300px;
         border-radius: 20px;
         margin-right: 110px;
 
@@ -69,13 +74,14 @@ header {
           h5 {
             font-size: 40px;
             font-weight: bold;
-            padding: 36px 40px;
+            padding: 54px 48px 0 48px;
           }
 
           p {
+            font-family: "Inter";
             font-size: 24px;
-            font-weight: 400;
-            padding: 24px 40px;
+            font-weight: 500;
+            padding: 36px 48px;
             line-height: 142%;
           }
       }
@@ -109,21 +115,24 @@ header {
       position: absolute;
       top: 56vh;
       margin-left: 15vw;
-    }
 
-    p {
-      font-size: 24px;
-      padding: 12px 16px;
-      margin-bottom: 8px;
+      p {
+        font-family: "Inter";
+        font-size: 24px;
+        width: max-content;
 
-      border-radius: 30px;
-      color: var(--main-black);
-      background: var(--main-grey);
+        padding: 12px 16px;
+        margin-bottom: 8px;
+
+        border-radius: 30px;
+        color: var(--main-black);
+        background: var(--main-grey);
+      }
     }
   }
 
   .main__three {
-    height: 100vh;
+    height: 115vh;
     position: relative;
     border-radius: 0 0 70px 70px;
     z-index: 2;
@@ -144,12 +153,12 @@ header {
       p {
         font-family: "Inter";
         font-size: 24px;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 142%;
 
         position: absolute;
         top: 30vh;
-        width: 50vw;
+        width: 49vw;
 
         margin-left: 15vw;
         color: var(--main-black);
@@ -157,12 +166,14 @@ header {
 
       .main__three__card_one {
         position: absolute;
-        width: 120vw;
-        bottom: 15vh;
+        width: 170vw;
+        bottom: 25vh;
+        transform: translateX(-10vw);
 
           span {
-            font-size: 80px;
-            padding: 1%;
+            font-size: 90px;
+            padding: 32px 40px;
+            vertical-align: middle;
 
 
             margin-left: 30px;
@@ -171,18 +182,19 @@ header {
           }
 
             .img__main__three__card {
-              width: 54px;
+              width: 80px;
             }
       }
 
       .main__three__card_two {
         position: absolute;
-        width: 120vw;
-        bottom: 35vh;
+        width: 140vw;
+        bottom: 47vh;
+        transform: translateX(-5vw);
 
           span {
-            font-size: 80px;
-            padding: 1%;
+            font-size: 90px;
+            padding: 32px 40px;
 
 
             margin-left: 30px;
@@ -196,6 +208,7 @@ header {
       }
   }
 }
+
 .section__three {
   font-family: "Inter";
 
@@ -219,13 +232,14 @@ header {
     }
 
     p {
+      font-family: "Inter";
+      font-weight: 500;
       font-size: 24px;
-      font-weight: 400;
       line-height: 142%;
 
       position: absolute;
       top: 63vh;
-      width: 28vw;
+      width: 30vw;
 
       margin-left: 15vw;
       color: var(--main-black);
@@ -240,9 +254,10 @@ header {
   }
 
   .main__five {
-    height: 160vh;
+    height: 190vh;
     position: relative;
     border-radius: 0 0 70px 70px;
+    z-index: 2;
 
 
     h4 {
@@ -278,6 +293,7 @@ header {
           margin-bottom: 48px;
 
           p {
+            font-family: "Inter";
             font-size: 18px;
             margin: 30px 0;
 
@@ -340,9 +356,17 @@ header {
 
 
 .section__four {
+  background: var(--main-grey);
+  font-family: "Inter";
+  font-weight: bold;
 
   .main__seven {
+    height: 120vh;
+    position: relative;
+    transform: translateY(-10vh);
+
     background: var(--main-yellow);
+    border-radius: 0 0 70px 70px;
 
     h4 {
       font-size: 60px;
@@ -350,16 +374,31 @@ header {
       width: 40vw;
       line-height: 122%;
 
-      // position: absolute;
-      // top: 15vh;
-      // left: 15vw;
+      position: absolute;
+      top: 48vh;
+      left: 50vw;
       color: var(--main-black);
     }
 
     p {
+      font-family: "Inter";
       font-size: 24px;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 142%;
+
+      width: 38vw;
+
+      position: absolute;
+      top: 71vh;
+      left: 50vw;
+      color: var(--main-black);
+    }
+
+    .main__six__img {
+      width: 500px;
+      position: absolute;
+      bottom: 0;
+      left: 15vw;
     }
   }
 
