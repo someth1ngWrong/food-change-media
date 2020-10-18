@@ -11,9 +11,9 @@ puts "Destroyed everything you touch"
 
 posts = [
 {
-	name: "New Album",
-	title: "The Bad Seeds",
-	content: "Tracklist",
+	name: "Назавание",
+	title: "Описание",
+	content: "Рецепт",
   image: File.open(Rails.root.join('public', 'images', 'pic-1.jpeg'))
 },
 {
