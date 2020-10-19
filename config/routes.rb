@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  
   resources :posts
+  resources :subscribers
   # get 'about/index'
   get 'posts/index'
 
