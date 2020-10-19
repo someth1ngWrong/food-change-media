@@ -5,11 +5,21 @@
   <%= @post.name %>
 </p>
 
-<%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
-
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
+</p>
+
+<%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
+
+<p>
+	<strong>Time:</strong>
+	<%= @post.time %>
+</p>
+
+<p>
+  <strong>Ingredients:</strong>
+  <%= @post.ingredients %>
 </p>
 
 <p>

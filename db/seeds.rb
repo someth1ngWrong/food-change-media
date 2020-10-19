@@ -14,13 +14,17 @@ posts = [
 	name: "Назавание",
 	title: "Описание",
 	content: "Рецепт",
-  image: File.open(Rails.root.join('public', 'images', 'pic-1.jpeg'))
+  image: File.open(Rails.root.join('public', 'images', 'pic-1.jpeg')),
+	time: "15 min",
+	ingredients: "meat, tomato, peanuts"
 },
 {
 	name: "Old Album",
 	title: "The Bad Seeds Old",
 	content: "Some Old Tracklist",
-  image: open("https://in-sound.ru/upload/iblock/d85/d859aa8387fd5fcd7a933be2af91066b.jpg")
+  image:File.open(Rails.root.join('public', 'images', 'pic-2.png')),
+	time: "15 min",
+	ingredients: "meat, tomato, peanuts"
 }
 ]
 posts.each do |post|
