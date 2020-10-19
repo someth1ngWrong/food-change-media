@@ -1,13 +1,13 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: var(--main-grey);
+  color: var(--main-black);
   // margin: 33px;
 }
 
 body, p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
+  font-family: "Inter", verdana, arial, helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 24px; }
 
 pre {
   background-color: #eee;
@@ -15,20 +15,35 @@ pre {
   font-size: 11px; }
 
 a {
-  color: #000; }
+  font-family: "Inter";
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 20px;
+  color: var(--main-white);
 
-a:visited {
-  color: #666; }
+  background: var(--main-black);
+  border-radius: 50px;
+}
 
 a:hover {
-  color: #fff;
-  background-color: #000; }
+  text-decoration: none;
+  background: var(--main-yellow);}
+
+table {
+  margin-left: 10vw;
+  margin-top: 10vh;
+  text-align: left;
+}
 
 th {
-  padding-bottom: 5px; }
+  font-family: "Inter";
+  font-weight: bold;
+  padding-bottom: 20px; }
 
 td {
-  padding: 0 5px 7px; }
+  padding: 0 100px 34px 0px;
+}
 
 div.field,
 div.actions {
