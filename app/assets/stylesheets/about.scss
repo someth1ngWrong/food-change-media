@@ -101,6 +101,30 @@ header {
   }
 }
 
+@keyframes transformCards {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes transformCardsTwo {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 .section__two {
   background: var(--main-grey);
   font-family: "Inter";
@@ -182,6 +206,7 @@ header {
         width: 170vw;
         bottom: 25vh;
         transform: translateX(-10vw);
+        animation: transformCardsTwo 30s linear infinite;
 
           span {
             font-size: 90px;
@@ -204,6 +229,7 @@ header {
         width: 140vw;
         bottom: 47vh;
         transform: translateX(-5vw);
+        animation: transformCards 30s linear infinite;
 
           span {
             font-size: 90px;
@@ -285,12 +311,19 @@ header {
       color: var(--main-black);
     }
 
-    .main_five_card {
-      width: 25vw;
-
+    .main-five-card {
       position: absolute;
       top: 32vh;
       left: 15vw;
+
+      height: 120vh;
+    }
+
+    .main_five_card {
+      width: 25vw;
+
+      position: sticky;
+      top: 0;
 
       border-radius: 20px;
       background: var(--main-yellow);
