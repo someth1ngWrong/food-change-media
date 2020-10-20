@@ -19,7 +19,7 @@ a {
   font-weight: bold;
   text-decoration: none;
   padding: 10px 20px;
-  margin: 20px;
+  margin: 10px;
   color: var(--main-white);
 
   background: var(--main-black);
@@ -31,19 +31,54 @@ a:hover {
   background: var(--main-yellow);}
 
 table {
-  margin-left: 10vw;
-  margin-top: 10vh;
+  margin-left: 5vw;
+  margin-top: 12vh;
   text-align: left;
+  border-radius: 50px;
+  background: var(--main-white);
+}
+
+table td:nth-of-type(1) {
+	width: 400px;
+  padding-left: 40px;
+}
+
+table td:nth-of-type(2) {
+	width: 300px;
+}
+
+table td:nth-of-type(3) {
+	width: 100px;
+}
+
+table td:nth-of-type(5) {
+	width: 30px;
+  padding: 0;
+}
+
+table td:nth-of-type(6) {
+	width: 30px;
+  padding: 0;
+}
+
+table td:nth-of-type(7) {
+	width: 30px;
+  padding: 0;
 }
 
 th {
   font-family: "Inter";
   font-weight: bold;
-  padding-bottom: 20px; }
+}
+
+th:nth-child(1) {
+  padding: 30px 40px; }
+
 
 td {
-  padding: 0 30px 34px 0px;
-  vertical-align: middle;  
+  // padding: 0 30px 34px 0px;
+  padding: 0 15px 0 0;
+  vertical-align: middle;
 }
 
 div.field,

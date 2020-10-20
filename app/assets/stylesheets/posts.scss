@@ -2,9 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .test {
-  margin: 50px 50px;
+  margin: 7vh 5vw;
   font-family: "Inter";
   font-size: 60px;
   font-weight: bold;
   color: var(--main-black);
+}
+
+.btn_new-post {
+  margin: 3vh 0 5vh 5vw;
+  // margin-left: 5vw;
 }
