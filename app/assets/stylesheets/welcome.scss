@@ -105,7 +105,7 @@ main {
 }
 
 footer {
-  height: 85vh;
+  height: 80vh;
   background: var(--main-black);
   h3 {
     font-family: 'Inter';
@@ -119,29 +119,23 @@ footer {
     margin-left: 52vw;
     transform: translate(-50%, -50%);
 
+    @mixin emj-style-footer {
+      height: 65px;
+      vertical-align: middle;
+    }
+
+    .emj__phone {
+      @include emj-style-footer;
+    }
+
+    .emj__postbox {
+      @include emj-style-footer;
+    }
+
     span{
       background: var(--main-black);
     }
   }
 }
-
-@mixin emj-style-footer {
-  height: 65px;
-  vertical-align: middle;
-}
-
-.emj__phone {
-  @include emj-style-footer;
-}
-
-.emj__postbox {
-  @include emj-style-footer;
-}
-
-
-
-
-
-
 
 // .
