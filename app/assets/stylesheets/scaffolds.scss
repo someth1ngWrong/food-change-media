@@ -31,7 +31,7 @@ a:hover {
   background: var(--main-yellow);}
 
 table {
-  margin-left: 5vw;
+  font-weight: 500;
   margin-top: 12vh;
   text-align: left;
   border-radius: 50px;
@@ -63,12 +63,13 @@ table td:nth-of-type(6) {
 
 table td:nth-of-type(7) {
 	width: 30px;
-  padding: 0;
+  padding-right: 20px;
 }
 
 th {
   font-family: "Inter";
   font-weight: bold;
+  padding-top: 50px;
 }
 
 th:nth-child(1) {

@@ -11,5 +11,97 @@
 
 .btn_new-post {
   margin: 3vh 0 5vh 5vw;
-  // margin-left: 5vw;
 }
+
+.btn__back {
+  margin: 5vh;
+}
+
+@mixin show__post {
+  font-family: "Inter";
+  margin-left: 30vw;
+  width: 50vw;
+
+}
+
+.show__name {
+  @include show__post;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 140%;
+
+  margin-top: 15vh;
+}
+
+.show__name__pre {
+  display: none;
+}
+
+.show__title {
+  @include show__post;
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 5px;
+  opacity: 0.6;
+}
+
+.show__title__pre {
+  display: none;
+}
+
+.show__img {
+  margin-left: 30vw;
+}
+
+.show__time {
+  @include show__post;
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.show__time__pre {
+  display: none;
+}
+
+.show__ingredients {
+  @include show__post;
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 24px;
+}
+
+.show__ingredients_pre {
+  display: none;
+}
+
+.show__content {
+  @include show__post;
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 24px;
+  margin-bottom: 120px;
+}
+
+.show__content__pre {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ghj

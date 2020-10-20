@@ -369,7 +369,7 @@ header {
 
 
 .section__four {
-  background: var(--main-grey);
+  background: var(--main-black);
   font-family: "Inter";
   font-weight: bold;
 
@@ -413,6 +413,11 @@ header {
       bottom: 0;
       left: 15vw;
     }
+  }
+
+  footer {
+    height: 68vh;
+    transform: translateY(-10vh);
   }
 
 }
