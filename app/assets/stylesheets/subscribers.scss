@@ -1,3 +1,34 @@
 // Place all the styles related to the Subscribers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+@mixin mailer {
+  font-family: 'Inter';
+  font-weight: bold;
+  font-size: 20px;
+
+  width: 85vw;
+  height: 20vh;
+  border-radius: 500px;
+
+  margin-left: 50vw;
+  margin-bottom: 5vh;
+  transform: translateX(-50%);
+}
+
+input:nth-child(2){
+  @include mailer;
+  text-align: center;
+  background-color: var(--main-black);
+  border: 10px solid var(--main-yellow);
+  color: var(--main-yellow);
+}
+input:nth-child(3){
+  @include mailer;
+  border: none;
+  background-color: var(--main-grey);
+}
+input:nth-child(3):hover {
+  background-color: var(--main-yellow);
+}

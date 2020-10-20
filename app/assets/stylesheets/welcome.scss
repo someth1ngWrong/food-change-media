@@ -21,44 +21,42 @@ body {
 .header {
   height: 90vh;
   background: var(--main-yellow);
-  text-align: center;
   border-radius: 0px 0px 70px 70px;
-}
-
-.header {
-  h1 {
-    font-family: 'Inter';
-    font-weight: bold;
-    font-size: 50px;
-    width: 80vw;
-    line-height: 1.6;
-
-    position: absolute;
-    top: 40vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-  }
 }
 
 @mixin span-emj {
 
-  // height: 90px;
   border-radius: 100px;
   // border-radius: calc($ddd + 10vh);
   background: var(--main-white);
   padding: 4px 30px 10px 20px;
+}
 
+.header {
+  h1 {
+    position: absolute;
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 60px;
+    width: 70vw;
+    line-height: 1.6;
 
+    top: 40vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    span {
+      @include span-emj ;
+    }
+  }
 }
 
 
-span {
-  @include span-emj ;
-}
-
+// span {
+//   @include span-emj ;
+// }
 
 @mixin emj-style {
-  height: 45px;
+  height: 50px;
   vertical-align: middle;
 }
 
@@ -78,27 +76,63 @@ span {
   background: var(--main-black);
 }
 
+
 main {
   height: 100vh;
   border-radius: 0px 0px 70px 70px;
   background: var(--main-grey);
-}
 
-main {
-    h2 {
-      font-family: 'Inter';
-      font-weight: bold;
-    }
-}
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  h2 {
+    font-family: 'Inter';
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.25;
+    color: var(--main-black);
 
-footer {
-  height: 100vh;
-  background: var(--main-black);
-  h3 {
-    color: var(--main-grey);
+    width: 40vw;
+    margin-top: 50vh;
+    transform: translateY(-25%);
+    margin-left: 10vw;
+  }
+  .plate {
+    height: 90vh;
+    margin-top: 50vh;
+    transform: translateY(-50%);
   }
 }
 
+footer {
+  height: 85vh;
+  background: var(--main-black);
+  h3 {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 60px;
+    width: 70vw;
+    line-height: 1.6;
+    color: var(--main-grey);
+
+    margin-top: 20vh;
+    margin-left: 55vw;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin emj-style-footer {
+  height: 65px;
+  vertical-align: middle;
+}
+
+.emj__phone {
+  @include emj-style-footer;
+}
+
+.emj__postbox {
+  @include emj-style-footer;
+}
 
 
 
