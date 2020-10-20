@@ -118,6 +118,10 @@ footer {
     margin-top: 20vh;
     margin-left: 52vw;
     transform: translate(-50%, -50%);
+
+    span{
+      background: var(--main-black);
+    }
   }
 }
 

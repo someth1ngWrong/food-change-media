@@ -17,18 +17,24 @@
   transform: translateX(-50%);
 }
 
-input:nth-child(2){
-  @include mailer;
-  text-align: center;
-  background-color: var(--main-black);
-  border: 10px solid var(--main-yellow);
-  color: var(--main-yellow);
+
+.new_subscriber{
+  #subscriber_email{
+    @include mailer;
+    text-align: center;
+    background-color: var(--main-black);
+    border: 10px solid var(--main-yellow);
+    color: var(--main-yellow);
+  }
 }
-input:nth-child(3){
-  @include mailer;
-  border: none;
-  background-color: var(--main-grey);
-}
-input:nth-child(3):hover {
-  background-color: var(--main-yellow);
+.new_subscriber{
+  input{
+    @include mailer;
+    border: none;
+    background-color: var(--main-grey);
+  }
+  input:hover{
+    @include mailer;
+    background-color: var(--main-yellow);
+  }
 }

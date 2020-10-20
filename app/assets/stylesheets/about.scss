@@ -7,6 +7,19 @@
   font-weight: bold;
 }
 
+@mixin span-emj {
+
+  border-radius: 100px;
+  // border-radius: calc($ddd + 10vh);
+  background: var(--main-white);
+  padding: 4px 30px 10px 20px;
+}
+
+span {
+  @include span-emj ;
+}
+
+
 header {
   height: 90vh;
   border-radius: 0 0 70px 70px;
