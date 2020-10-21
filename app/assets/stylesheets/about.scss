@@ -103,25 +103,25 @@ header {
 
 @keyframes transformCards {
   0% {
-    transform: translateX(0%);
-  }
-  50% {
     transform: translateX(-20%);
   }
-  100% {
+  50% {
     transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-20%);
   }
 }
 
 @keyframes transformCardsTwo {
   0% {
-    transform: translateX(0%);
+    transform: translateX(-10%);
   }
   50% {
-    transform: translateX(20%);
+    transform: translateX(-30%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(-10%);
   }
 }
 
@@ -203,8 +203,8 @@ header {
 
       .main__three__card_one {
         position: absolute;
-        width: 170vw;
-        bottom: 25vh;
+        width: 205vw;
+        bottom: 23vh;
         transform: translateX(-10vw);
         animation: transformCardsTwo 30s linear infinite;
 
@@ -302,7 +302,7 @@ header {
     h4 {
       font-size: 60px;
       font-weight: bold;
-      width: 40vw;
+      width: 50vw;
       line-height: 122%;
 
       position: absolute;
@@ -320,15 +320,19 @@ header {
     }
 
     .main_five_card {
+
       width: 25vw;
+      height: 88vh;
 
       position: sticky;
-      top: 0;
+      top: 10vh;
 
       border-radius: 20px;
       background: var(--main-yellow);
 
         .main_five_card__img {
+          margin-left: 34px;
+          margin-top: 10px;
           // transform: translate(50%, 50%);
         }
 
@@ -351,6 +355,7 @@ header {
 
                 .main__five__ingredients__img {
                   height: 24px;
+                  vertical-align: middle;
                 }
             }
           }
@@ -370,6 +375,7 @@ header {
           margin-bottom: 20vh;
 
           h4 {
+            width: 40vw;
             position: static;
             left: 0;
           }
@@ -449,7 +455,7 @@ header {
   }
 
   footer {
-    height: 68vh;
+    height: 70vh;
     transform: translateY(-10vh);
   }
 

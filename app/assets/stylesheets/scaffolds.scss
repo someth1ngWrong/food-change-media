@@ -28,7 +28,15 @@ a {
 
 a:hover {
   text-decoration: none;
-  background: var(--main-yellow);}
+  background: var(--main-yellow);
+}
+
+footer {
+  a:hover {
+    color: var(--main-yellow);
+    background: none;
+  }
+}
 
 table {
   font-weight: 500;

@@ -42,7 +42,7 @@ body {
     line-height: 1.6;
 
     top: 40vh;
-    left: 50vw;
+    left: 55vw;
     transform: translate(-50%, -50%);
     span {
       @include span-emj ;
@@ -105,7 +105,7 @@ main {
 }
 
 footer {
-  height: 80vh;
+  height: 82vh;
   background: var(--main-black);
   h3 {
     font-family: 'Inter';
@@ -116,7 +116,7 @@ footer {
     color: var(--main-grey);
 
     margin-top: 20vh;
-    margin-left: 52vw;
+    margin-left: 56vw;
     transform: translate(-50%, -50%);
 
     @mixin emj-style-footer {
@@ -137,5 +137,6 @@ footer {
     }
   }
 }
+
 
 // .
