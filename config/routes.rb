@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   resources :posts
   resources :subscribers
   # get 'about/index'
@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get 'welcome', to: 'welcome#index'
   get 'about', to: 'about#index'
+  get 'styleguide', to: 'styleguide#index'
 
   root 'welcome#index'
   # get 'welcome/index', to: 'welcome#index'
