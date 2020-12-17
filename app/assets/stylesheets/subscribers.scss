@@ -5,36 +5,96 @@
 
 @mixin mailer {
   font-family: 'Inter';
-  font-weight: bold;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 14px;
 
   width: 85vw;
-  height: 20vh;
+  height: 10vh;
   border-radius: 500px;
 
-  margin-left: 50vw;
-  margin-bottom: 5vh;
-  transform: translateX(-50%);
+  // padding: 7%;
 }
 
 
 .new_subscriber{
   #subscriber_email{
     @include mailer;
+    font-size: 14px;
     text-align: center;
-    background-color: var(--main-black);
-    border: 10px solid var(--main-yellow);
-    color: var(--main-yellow);
+    border: 5px solid var(--main-black);
+    color: var(--main-black);
+    background-color: var(--main-purple);
+    margin: 7% 0 3% 7%;
   }
 }
 .new_subscriber{
   input{
     @include mailer;
     border: none;
-    background-color: var(--main-grey);
+    margin: 0 7%;
+    color: var(--main-white);
+    background-color: var(--main-black);
   }
-  input:hover{
-    @include mailer;
-    background-color: var(--main-yellow);
+  // input:hover{
+  //   @include mailer;
+  //   background-color: var(--main-yellow);
+  // }
+}
+
+
+@media (min-width:768px) {
+
+  @mixin mailer {
+    font-size: 18px;
+  }
+
+  .new_subscriber {
+    input {
+      font-size: 18px;
+    }
+
+    #subscriber_email {
+      @include mailer;
+      font-size: 18px;
+    }
   }
 }
+
+@media (min-width: 1024px) {
+  .new_subscriber {
+    #subscriber_email {
+      @include mailer;
+      height: 20vh;
+      font-size: 22px;
+    }
+    input {
+      height: 20vh;
+      font-size: 22px;
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
