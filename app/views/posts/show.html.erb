@@ -2,7 +2,9 @@
 
 <div class="btn__back">
   <%= link_to 'Back', posts_path %>
-  <%= link_to 'Edit', edit_post_path(@post) %>
+  <% if user_signed_in? %>
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+  <% end %>
 </div>
 
 <p class="show__name">
@@ -29,5 +31,5 @@
 
 <p class="show__content">
   <strong class="show__content__pre">Content:</strong>
-  <%= @post.content %>
+  <%= @post.content.html_safe %>
 </p>

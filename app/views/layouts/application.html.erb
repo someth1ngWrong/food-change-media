@@ -4,7 +4,7 @@
     <title>Refood</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
+
     <% if notice %>
       <%= notice %>
     <% end %>
@@ -13,9 +13,22 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag Ckeditor.cdn_url %>
   </head>
 
   <body>
+    <% if notice %>
+    <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+    <p class="alert"><%= alert %></p>
+    <% end %>
     <%= yield %>
+    <div class="top_menu">
+    <% if user_signed_in? %>
+      <%= link_to 'Профиль', edit_user_registration_path %> | <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Войти', new_user_session_path %> | <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+    <% end %>
+</div>
   </body>
 </html>

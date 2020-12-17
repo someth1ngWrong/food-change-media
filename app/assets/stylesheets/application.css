@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+ .top_menu {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   width: 100%;
+   height: 60px;
+   margin-bottom: 40px;
+   background: #eee;
+   border-bottom: 1px solid #ddd;
+ }
+ .top_menu a {
+   margin: 0 20px;
+ }
