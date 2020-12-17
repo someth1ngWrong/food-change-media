@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Партнерам</title>
+  </head>
+  <body>
+    <section class="partners__header">
+      <%= image_tag 'logo-bw', class: 'logo_bw'%>
+      <%= link_to " ", landing_index_path, class: 'logo_bw_a' %>
+      <h1>Хотите продвигать свое заведение? <span>Поможем!</span></h1>
+      <p>Сделаем так, чтобы ваш ресторан узнавали и&nbsp;посещали</p>
+      <a href="#">Заполнить заявку</a>
+    </section>
+
+    <section class="partners__advantages">
+      <h2>Публикуйте рецепты своего заведения&nbsp;— повышайте охваты и&nbsp;посещаемость</h2>
+    </section>
+
+    <section class="partners__form">
+      <h1>Давайте обсудим!</h1>
+      <p>После заполнения заявки в&nbsp;ближайшее время с&nbsp;вами свяжется наш менеджер</p>
+      <%= render "subscribers/form" %>
+    </section>
+
+  </body>
+</html>

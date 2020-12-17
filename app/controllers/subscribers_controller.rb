@@ -6,9 +6,9 @@ class SubscribersController < ApplicationController
   def create
     @subscriber = Subscriber.new(subscriber_params)
     if @subscriber.save
-      redirect_to welcome_path, notice: "Вы подписаны!"
+      redirect_to partners_index_path, notice: "Заявка отправлена!"
     else
-      redirect_to welcome_path, notice: "Некорректный адрес"
+      redirect_to partners_index_path, notice: "Некорректный адрес"
     end
   end
 

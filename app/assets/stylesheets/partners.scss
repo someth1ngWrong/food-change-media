@@ -1,0 +1,248 @@
+// Place all the styles related to the partners controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+* {
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --main-black: #272727;
+  --main-white: #F8F5E8;
+  --main-green: #4AB15E;
+  --main-red: #FF6242;
+  --main-yellow: #FECE30;
+  --main-purple: #9897DE;
+}
+
+body {
+  background: var(--main-white);
+  overflow-x: hidden;
+}
+
+.partners__header {
+  height: 80vh;
+  background: var(--main-green);
+
+  .logo_bw {
+    padding: 7%;
+  }
+
+  .logo_bw_a {
+    width: 150px;
+    height: 30px;
+
+    padding: 7%;
+    margin: 2%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+  }
+
+  h1 {
+    font-family: "Inter";
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 54px;
+    letter-spacing: -0.03em;
+    text-align: left;
+    padding: 7%;
+
+    span {
+      background: none;
+      color: var(--main-yellow);
+    }
+  }
+
+  p {
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.03em;
+    text-align: left;
+
+    width: 70vw;
+    padding: 7%;
+  }
+
+  a {
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 14% 7%;
+    padding: 20px 30px;
+  }
+}
+
+.partners__advantages {
+  background: var(--main-white);
+
+  h2 {
+    font-family: "Inter";
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.03em;
+    text-align: left;
+
+    padding: 7%;
+  }
+}
+
+.partners__form {
+  padding-bottom: 5vh;
+  background: var(--main-purple);
+
+  h1 {
+    font-family: "Inter";
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 91%;
+    letter-spacing: -0.03em;
+    text-align: left;
+    padding: 7%;
+  }
+
+  p {
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: -0.03em;
+    text-align: left;
+
+    width: 85vw;
+    padding: 0 7%;
+  }
+}
+
+@media (min-width: 768px) {
+  .partners__header {
+    height: 100vh;
+    h1 {
+      font-family: "Inter";
+      font-size: 108px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 98px;
+      letter-spacing: -0.055em;
+      text-align: left;
+
+      position: absolute;
+      top: 6%;
+    }
+
+    p {
+      width: 60vw;
+      position: absolute;
+      top: 60%;
+      font-size: 18px;
+    }
+
+    .logo_bw_a {
+      z-index: 10;
+    }
+
+    a {
+      position: absolute;
+      top: 65%;
+      left: 0;
+    }
+  }
+
+  .partners__form {
+    h1 {
+      font-family: "Inter";
+      font-size: 108px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 98px;
+      letter-spacing: -0.055em;
+      text-align: left;
+      padding: 7% 5% 5% 7%;
+    }
+
+    p {
+      width: 60vw;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .partners__header {
+    p {
+      font-size: 22px;
+    }
+
+    a {
+      font-size: 22px;
+      padding: 30px 40px;
+    }
+  }
+
+  .partners__form {
+    p {
+      font-size: 22px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
