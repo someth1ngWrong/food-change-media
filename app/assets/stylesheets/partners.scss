@@ -71,7 +71,7 @@ body {
     text-align: left;
 
     width: 70vw;
-    padding: 7%;
+    padding: 5% 7%;
   }
 
   a {
@@ -82,13 +82,28 @@ body {
     line-height: 16px;
     letter-spacing: 0em;
     text-align: center;
-    margin: 14% 7%;
+
+    margin: 0% 7%;
     padding: 20px 30px;
+
+    position: absolute;
+    top: 62vh;
   }
 }
 
 .partners__advantages {
   background: var(--main-white);
+
+  h1 {
+    font-family: "Inter";
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 91%;
+    letter-spacing: -0.03em;
+    text-align: left;
+    padding: 12% 7% 0 7%;
+  }
 
   h2 {
     font-family: "Inter";
@@ -99,7 +114,16 @@ body {
     letter-spacing: -0.03em;
     text-align: left;
 
-    padding: 7%;
+    padding: 0 7%;
+    margin: 12% 0;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+
+    span {
+      color: var(--main-purple);
+    }
   }
 }
 
@@ -134,7 +158,7 @@ body {
 
 @media (min-width: 768px) {
   .partners__header {
-    height: 100vh;
+    height: 90vh;
     h1 {
       font-family: "Inter";
       font-size: 108px;
@@ -147,6 +171,7 @@ body {
       position: absolute;
       top: 6%;
     }
+
 
     p {
       width: 60vw;
@@ -161,8 +186,23 @@ body {
 
     a {
       position: absolute;
-      top: 65%;
+      top: 72vh;
       left: 0;
+
+      font-size: 18px;
+    }
+  }
+
+  .partners__advantages {
+    h1 {
+      font-size: 108px;
+      line-height: 98px;
+
+      padding: 12% 7% 3% 7%;
+    }
+
+    h2 {
+      margin: 6% 0;
     }
   }
 
@@ -187,6 +227,20 @@ body {
 
 @media (min-width: 1024px) {
   .partners__header {
+    height: 100vh;
+
+    .logo_bw {
+      padding: 4% 7%;
+    }
+
+    h1 {
+      width: 94vw;
+      font-size: 5.3em;
+      line-height: 91%;
+
+      top: 3%;
+    }
+
     p {
       font-size: 22px;
     }
@@ -194,7 +248,26 @@ body {
     a {
       font-size: 22px;
       padding: 30px 40px;
+      top: 79vh;
     }
+  }
+
+  .partners__advantages {
+    h1 {
+      padding: 7% 7% 3% 7%;
+    }
+
+    h2 {
+      margin: 3% 0;
+
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+    }
+  }
+
+  .partners__advantages :last-child {
+    margin-bottom: 8%;
   }
 
   .partners__form {
@@ -202,6 +275,61 @@ body {
       font-size: 22px;
     }
   }
+}
+
+@media (min-width: 1440px) {
+  .partners__header {
+    .logo_bw {
+      padding: 2% 7%;
+    }
+
+    h1 {
+      font-size: 140px;
+
+      top: -2%;
+    }
+
+    p {
+      top: 63vh;
+    }
+  }
+
+  .partners__advantages {
+    h1 {
+      font-size: 143px;
+      line-height: 91%;
+
+      padding: 9% 7% 2% 7%;
+    }
+
+    h2 {
+      font-size: 64px;
+      line-height: 112%;
+
+      width: 82vw;
+
+      margin: 5% 0;
+    }
+
+    .partners__advantages :last-child {
+      margin-bottom: 12%;
+    }
+  }
+
+  .partners__form {
+    h1 {
+      font-size: 143px;
+      line-height: 91%;
+
+      padding: 9% 7% 2% 7%;
+    }
+
+    p {
+      width: 50vw;
+      padding: 3% 7% 0 7%;
+    }
+  }
+
 }
 
 

@@ -72,8 +72,21 @@
       font-size: 22px;
     }
   }
+}
 
 
+@media (min-width: 1440px) {
+  .new_subscriber {
+    #subscriber_email {
+      @include mailer;
+      height: 30vh;
+      font-size: 22px;
+    }
+    input {
+      height: 30vh;
+      font-size: 22px;
+    }
+  }
 }
 
 
