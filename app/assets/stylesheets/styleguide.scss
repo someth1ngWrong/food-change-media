@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --main-black: #272727;
+  --main-white: #F8F5E8;
+  --main-green: #4AB15E;
+  --main-red: #FF6242;
+  --main-yellow: #FECE30;
+  --main-purple: #9897DE;
+}
+
+body {
+  background: var(--main-white);
+  overflow-x: hidden;
+}

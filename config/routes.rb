@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   # root 'posts#index'
   get 'partners/index'
-  get 'landing/index'
+  get 'landing/index', to: 'landing#index'
 
   get 'posts/index'
   get 'welcome', to: 'welcome#index'
