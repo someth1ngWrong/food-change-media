@@ -12,6 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2020_12_18_005048) do
 
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string "data_file_name", null: false
+    t.string "data_content_type"
+    t.integer "data_file_size"
+    t.string "type", limit: 30
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
+  end
+
   create_table "like_defs", force: :cascade do |t|
     t.integer "post_id", null: false
     t.integer "user_id", null: false
