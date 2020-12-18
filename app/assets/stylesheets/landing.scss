@@ -78,15 +78,18 @@ body {
     display: inline-block;
     padding: 3vh 36vw;
     // margin: 0% 0 14% 7%;
+    border-radius: 500px;
 
     position: absolute;
     bottom: 20vh;
     left: 50%;
 
     transform: translate(-50%,-50%);
+    text-decoration: none;
 
     z-index: 10;
 
+    color: var(--main-white);
     background: var(--main-black);
   }
 
@@ -432,11 +435,16 @@ body {
     display: inline-block;
     border-radius: 140px;
     padding: 3vh 36vw;
+
     position: absolute;
     bottom: 2vh;
     left: 50%;
     transform: translate(-53%, -50%);
     z-index: 10;
+    text-decoration: none;
+
+    color: var(--main-white);
+    background: var(--main-black);
   }
 
   a:hover {
