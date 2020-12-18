@@ -37,12 +37,14 @@
   <%= @post.tasties.count %> <%= (@post.tasties.count) == 1 ? 'Tasty' : 'Tasties'%>
 </p>
 
+
 <% pre_tasty = @post.tasties.find { |tasty| tasty.user_id == current_user.id} %>
 <% if pre_tasty %>
   <%= button_to 'Untasty', post_tasty_path(@post, pre_tasty), method: :delete %>
 <% else %>
   <%= button_to 'tasty', post_tasties_path(@post), method: :post %>
 <% end %>
+
 
 
 <p>
