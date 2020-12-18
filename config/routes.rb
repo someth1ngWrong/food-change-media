@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
-  resources :posts
+  # resources :posts
   resources :subscribers
+  resources :posts do
+    resources :tasties
+    resources :yummies
+  end
   # get 'about/index'
   # get 'welcome/index', to: 'welcome#index'
   # root 'welcome#index'

@@ -33,3 +33,24 @@
   <strong class="show__content__pre">Content:</strong>
   <%= @post.content.html_safe %>
 </p>
+<p>
+  <%= @post.tasties.count %> <%= (@post.tasties.count) == 1 ? 'Tasty' : 'Tasties'%>
+</p>
+
+<% pre_tasty = @post.tasties.find { |tasty| tasty.user_id == current_user.id} %>
+<% if pre_tasty %>
+  <%= button_to 'Untasty', post_tasty_path(@post, pre_tasty), method: :delete %>
+<% else %>
+  <%= button_to 'tasty', post_tasties_path(@post), method: :post %>
+<% end %>
+
+
+<p>
+  <%= @post.yummies.count %> <%= (@post.yummies.count) == 1 ? 'Yummy' : 'Yummies'%>
+</p>
+<% pre_yummy = @post.yummies.find { |yummy| yummy.user_id == current_user.id} %>
+<% if pre_yummy %>
+  <%= button_to 'Unyummy', post_yummy_path(@post, pre_yummy), method: :delete %>
+<% else %>
+  <%= button_to 'yummy', post_yummies_path(@post), method: :post %>
+<% end %>

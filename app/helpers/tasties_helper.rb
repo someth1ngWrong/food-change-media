@@ -1,0 +1,2 @@
+module TastiesHelper
+end
