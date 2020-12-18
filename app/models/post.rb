@@ -8,5 +8,6 @@ has_many :tasties, dependent: :destroy
 has_many :yummies, dependent: :destroy
 # has_many :likesdef, dependent: :destroy
 belongs_to :user
+belongs_to :category
 
 end

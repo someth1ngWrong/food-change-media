@@ -17,6 +17,11 @@
   <%= @post.title %>
 </p>
 
+<p>
+  <strong>Category:</strong>
+  <%= @post.category.name %>
+</p>
+
 <%= image_tag(@post.image.url, class: 'show__img', alt: 'Image') if @post.image? %>
 
 <p class="show__time">

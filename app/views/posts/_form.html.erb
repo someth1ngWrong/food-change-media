@@ -20,6 +20,11 @@
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
+  
+  <div class="field">
+    <%= form.label :category_id %>
+    <%= form.select :category_id, Category.pluck(:name, :id) %>
+  </div>
 
   <div>
 	<%= form.label :image %>

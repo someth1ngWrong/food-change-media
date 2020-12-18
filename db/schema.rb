@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_18_005048) do
+ActiveRecord::Schema.define(version: 2020_12_18_021546) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.boolean "display_in_navbar", default: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string "data_file_name", null: false
@@ -41,6 +49,8 @@ ActiveRecord::Schema.define(version: 2020_12_18_005048) do
     t.string "time"
     t.string "ingredients"
     t.integer "user_id", null: false
+    t.integer "category_id", null: false
+    t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -82,6 +92,7 @@ ActiveRecord::Schema.define(version: 2020_12_18_005048) do
 
   add_foreign_key "like_defs", "posts"
   add_foreign_key "like_defs", "users"
+  add_foreign_key "posts", "categories"
   add_foreign_key "posts", "users"
   add_foreign_key "tasties", "posts"
   add_foreign_key "tasties", "users"

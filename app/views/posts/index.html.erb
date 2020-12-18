@@ -2,7 +2,11 @@
 
 <h1 class="test">Posts</h1>
 <%= link_to 'New Post', new_post_path, class: 'btn_new-post' %>
-
+<%= link_to 'New Category', new_category_path %>
+<h2>All Categories</h2>
+<% Category.all.each do |cat| %>
+<%= link_to cat.name, posts_path(category: cat.name) %> <br>
+<% end %>
 <table>
   <thead>
     <tr>
@@ -18,6 +22,7 @@
       <tr>
         <td><%= post.name %></td>
         <td><%= post.title %></td>
+        <td><%= post.category.name %></td>
         <td><%= post.time %></td>
         <td><%= image_tag(post.image.url, alt: 'Image')%></td>
         <td><%= link_to 'Show', post %></td>
@@ -28,7 +33,7 @@
   </tbody>
 </table>
 
-<div class="btn__back">  
+<div class="btn__back">
 <%= link_to "Refood", welcome_path %>
 <%= link_to "О сервисе", about_path %>
 </div>
