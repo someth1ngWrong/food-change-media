@@ -11,7 +11,7 @@ require("channels")
 require("custom/index")
 
 
-//= require ScrollMagic
+// = require ScrollMagic
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

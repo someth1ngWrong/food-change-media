@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   # resources :posts
   resources :subscribers
+  resources :users
   resources :posts do
     resources :tasties
     resources :yummies
@@ -14,6 +15,8 @@ Rails.application.routes.draw do
   # root 'posts#index'
   get 'partners/index'
   get 'landing/index', to: 'landing#index'
+  get 'users/index'
+
 
   get 'posts/index'
   get 'welcome', to: 'welcome#index'

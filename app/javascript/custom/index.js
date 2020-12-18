@@ -2,8 +2,8 @@ console.log(1)
 
 
 
-// let controller = new ScrollMagic.Controller()
-//
+let controller = new ScrollMagic.Controller()
+
 // let gears = document.querySelector('.section__three__img')
 // let gearsAnimation = anime({
 //   targets: gears,
@@ -25,7 +25,7 @@ console.log(1)
 
 
 
-// 
+//
 //
 // var leftgear = document.querySelector('.section__three__img'),
 //
