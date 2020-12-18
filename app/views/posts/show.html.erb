@@ -1,10 +1,10 @@
-<p id="notice"><%= notice %></p>
+
 
 <div class="btn__back">
-  <%= link_to 'Back', posts_path %>
-  <% if user_signed_in? %>
+<%= link_to 'Back', posts_path %>
+<% if user_signed_in? %>
   <%= link_to 'Edit', edit_post_path(@post) %> |
-  <% end %>
+<% end %>
 </div>
 
 <p class="show__name">
@@ -32,4 +32,9 @@
 <p class="show__content">
   <strong class="show__content__pre">Content:</strong>
   <%= @post.content.html_safe %>
+</p>
+<p>
+  <strong>autor</strong>
+  <%= @post.user_id %>
+
 </p>
