@@ -1,63 +1,68 @@
 
 
-<div class="btn__back">
-<%= link_to 'Back', posts_path %>
+<div>
+<%= link_to '<- Вернуться назад', posts_path, class: 'show__post__btn__back' %>
 <% if user_signed_in? %>
-  <%= link_to 'Edit', edit_post_path(@post) %> |
+  <%= link_to 'Редактировать', edit_post_path(@post) , class: 'edit__post__btn__back' %>
 <% end %>
 </div>
 
 <p class="show__name">
-  <strong class="show__name__pre">Name:</strong>
+  <strong class="show__name__pre">Автор:</strong>
   <%= @post.name %>
 </p>
 
 <p class="show__title">
-  <strong class="show__title__pre">Title:</strong>
+  <strong class="show__title__pre">Название:</strong>
   <%= @post.title %>
 </p>
 
-<p>
-  <strong>Category:</strong>
+<p class="show__category">
+  <strong>Категория:</strong>
   <%= @post.category.name %>
 </p>
 
 <%= image_tag(@post.image.url, class: 'show__img', alt: 'Image') if @post.image? %>
 
 <p class="show__time">
-	<strong class="show__time__pre">Time:</strong>
+	<strong class="show__time__pre">Время приготовления:</strong>
 	<%= @post.time %>
 </p>
 
 <p class="show__ingredients">
-  <strong class="show__ingredients_pre">Ingredients:</strong>
+  <strong class="show__ingredients_pre">Ингредиенты:</strong>
   <%= @post.ingredients %>
 </p>
 
 <p class="show__content">
-  <strong class="show__content__pre">Content:</strong>
+  <strong class="show__content__pre">Текст рецепта:</strong>
   <%= @post.content.html_safe %>
 </p>
-<p>
-  <%= @post.tasties.count %> <%= (@post.tasties.count) == 1 ? 'Tasty' : 'Tasties'%>
-</p>
 
+<div class="show__like__count">
+  <div class="show__like__count__tasty">
+    <p>
+      <%= @post.tasties.count %> <%= (@post.tasties.count) == 1 ? 'Tasty' : 'Tasties'%>
+    </p>
 
-<% pre_tasty = @post.tasties.find { |tasty| tasty.user_id == current_user.id} %>
-<% if pre_tasty %>
-  <%= button_to 'Untasty', post_tasty_path(@post, pre_tasty), method: :delete %>
-<% else %>
-  <%= button_to 'tasty', post_tasties_path(@post), method: :post %>
-<% end %>
+    <% pre_tasty = @post.tasties.find { |tasty| tasty.user_id == current_user.id} %>
+    <% if pre_tasty %>
+      <%= button_to 'Untasty', post_tasty_path(@post, pre_tasty), method: :delete, class: 'show__like__count__btn' %>
+    <% else %>
+      <%= button_to 'Tasty', post_tasties_path(@post), method: :post %>
+    <% end %>
+  </div>
 
+  <div class="show__like__count__yummy">
+    <p>
+      <%= @post.yummies.count %> <%= (@post.yummies.count) == 1 ? 'Yummy' : 'Yummies'%>
+    </p>
 
-
-<p>
-  <%= @post.yummies.count %> <%= (@post.yummies.count) == 1 ? 'Yummy' : 'Yummies'%>
-</p>
-<% pre_yummy = @post.yummies.find { |yummy| yummy.user_id == current_user.id} %>
-<% if pre_yummy %>
-  <%= button_to 'Unyummy', post_yummy_path(@post, pre_yummy), method: :delete %>
-<% else %>
-  <%= button_to 'yummy', post_yummies_path(@post), method: :post %>
-<% end %>
+    <% pre_yummy = @post.yummies.find { |yummy| yummy.user_id == current_user.id} %>
+    <% if pre_yummy %>
+      <%= button_to 'Unyummy', post_yummy_path(@post, pre_yummy), method: :delete, class: 'show__like__count__yummy__btn'  %>
+    <% else %>
+      <%= button_to 'Yummy', post_yummies_path(@post), method: :post, class: 'show__like__count__yummy__btn'   %>
+    <% end %>
+  </div>
+</div>

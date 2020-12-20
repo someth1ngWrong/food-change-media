@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Display in navbar</th>
+      <th>Название</th>
+      <th>Описание</th>
+      <th>Отображение в навбаре</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,7 +20,7 @@
         <td><%= category.display_in_navbar %></td>
         <td><%= link_to 'Show', category %></td>
         <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Вы уверены??' } %></td>
       </tr>
     <% end %>
   </tbody>
