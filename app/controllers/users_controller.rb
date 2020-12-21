@@ -5,10 +5,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-  end
-
-  def show
-    @user = User.find(params[:id])
     if @user
       @posts = @user.favorited_posts
       render actions: :show

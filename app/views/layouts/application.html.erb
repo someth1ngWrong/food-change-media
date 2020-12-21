@@ -30,11 +30,13 @@
       <% Category.where(display_in_navbar: true).each do |cat| %>
       <%= link_to cat.name, posts_path(category: cat.name) %>
       <% end %>
-      <% if user_signed_in? %>
-      <%= link_to 'Профиль', edit_user_registration_path %><%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+
+      <% if user_signed_in? || admin_signed_in? %>
+      <%= link_to 'Профиль', edit_user_registration_path || edit_admin_registration_path%><%= link_to 'Выйти', destroy_user_session_path || destroy_admin_session_path, method: :delete %>
       <% else %>
-      <%= link_to 'Войти', new_user_session_path %>  <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+      <%= link_to 'Войти', new_user_session_path || new_admin_session_path %>  <%= link_to 'Зарегистрироваться', new_user_registration_path || new_admin_registration_path %>
       <% end %>
+
     </div>
     <% if notice %>
     <p class="notice"><%= notice %></p>

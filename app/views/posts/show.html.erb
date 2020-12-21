@@ -1,5 +1,4 @@
 
-
 <div>
 <%= link_to '<- Вернуться назад', posts_path, class: 'show__post__btn__back' %>
 <% if user_signed_in? %>
@@ -38,8 +37,12 @@
   <strong class="show__content__pre">Текст рецепта:</strong>
   <%= @post.content.html_safe %>
 </p>
-<p>
+
+<p><% if user_signed_in? %>
   <%= button_to 'Add to Favorite', post_favorites_path(@post), method: :post %>
+  <% else %>
+  <%= button_to 'Add to Favorite', new_user_session_path %>
+<% end %>
 </p>
 
 
@@ -49,11 +52,14 @@
       <%= @post.tasties.count %> <%= (@post.tasties.count) == 1 ? 'Tasty' : 'Tasties'%>
     </p>
 
-    <% pre_tasty = @post.tasties.find { |tasty| tasty.user_id == current_user.id} %>
-    <% if pre_tasty %>
-      <%= button_to 'Untasty', post_tasty_path(@post, pre_tasty), method: :delete, class: 'show__like__count__btn' %>
-    <% else %>
-      <%= button_to 'Tasty', post_tasties_path(@post), method: :post %>
+    <% if user_signed_in? %>
+
+      <% pre_tasty = @post.tasties.find { |tasty| tasty.user_id == current_user.id} %>
+      <% if pre_tasty %>
+        <%= button_to 'Untasty', post_tasty_path(@post, pre_tasty), method: :delete, class: 'show__like__count__btn' %>
+      <% else %>
+        <%= button_to 'Tasty', post_tasties_path(@post), method: :post %>
+      <% end %>
     <% end %>
   </div>
 
@@ -61,12 +67,13 @@
     <p>
       <%= @post.yummies.count %> <%= (@post.yummies.count) == 1 ? 'Yummy' : 'Yummies'%>
     </p>
-
-    <% pre_yummy = @post.yummies.find { |yummy| yummy.user_id == current_user.id} %>
-    <% if pre_yummy %>
-      <%= button_to 'Unyummy', post_yummy_path(@post, pre_yummy), method: :delete, class: 'show__like__count__yummy__btn'  %>
-    <% else %>
-      <%= button_to 'Yummy', post_yummies_path(@post), method: :post, class: 'show__like__count__yummy__btn'   %>
+    <% if user_signed_in? %>
+      <% pre_yummy = @post.yummies.find { |yummy| yummy.user_id == current_user.id} %>
+      <% if pre_yummy %>
+        <%= button_to 'Unyummy', post_yummy_path(@post, pre_yummy), method: :delete, class: 'show__like__count__yummy__btn'  %>
+      <% else %>
+        <%= button_to 'Yummy', post_yummies_path(@post), method: :post, class: 'show__like__count__yummy__btn'   %>
+      <% end %>
     <% end %>
   </div>
 </div>

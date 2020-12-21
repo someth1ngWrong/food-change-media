@@ -1,0 +1,11 @@
+<p>ID <%= @admin.id %></p>
+<p>Email <%= @admin.email %></p>
+
+In favorites <%= @admin.favorites.count %> <%= (@admin.favorites.count) == 1 ? 'Post' : 'Posts'%>
+<% @posts.each do |post| %>
+  <br><%= link_to post.title, post %>
+<% end %>
+
+<% if admin_signed_in? && @admin.id == current_admin.id %>
+	<p><%= link_to 'Edit profile', edit_admin_registration_path %></p>
+<% end %>

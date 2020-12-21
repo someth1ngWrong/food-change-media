@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :categories
   mount Ckeditor::Engine => '/ckeditor'
+  devise_for :admins
   devise_for :users
   # resources :posts
   resources :subscribers
@@ -23,4 +24,8 @@ Rails.application.routes.draw do
   get 'users', to: 'users#index'
   get 'users/:id' => 'users#show', :as => :user
   delete 'users/:id', to: 'users#destroy'
+
+  get 'admins', to: 'admins#index'
+  get 'admins/:id' => 'admins#show', :as => :admin
+  delete 'admins/:id', to: 'admins#destroy'
 end

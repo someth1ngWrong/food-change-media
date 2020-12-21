@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  http_basic_authenticate_with :name => "admin", :password => "admin", :except => [:show, :index]
+  # http_basic_authenticate_with :name => "admin", :password => "admin", :except => [:show, :index]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
 
