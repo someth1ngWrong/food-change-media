@@ -20,6 +20,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag Ckeditor.cdn_url %>
     <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js' %>
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js' %>
   </head>
 
   <body>
@@ -34,7 +35,7 @@
       <%= link_to cat.name, posts_path(category: cat.name) %> |
       <% end %>||||||||
     <% if user_signed_in? %>
-      <%= link_to 'Профиль', edit_user_registration_path %> | <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+      <%= link_to 'Профиль', current_user %> | <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
     <% else %>
       <%= link_to 'Войти', new_user_session_path %> | <%= link_to 'Зарегистрироваться', new_user_registration_path %>
     <% end %>

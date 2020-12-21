@@ -6,8 +6,10 @@ class Post < ApplicationRecord
 mount_uploader :image, ImageUploader
 has_many :tasties, dependent: :destroy
 has_many :yummies, dependent: :destroy
-# has_many :likesdef, dependent: :destroy
+has_many :favorites, dependent: :destroy
+
 belongs_to :user
 belongs_to :category
+
 
 end

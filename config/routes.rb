@@ -4,24 +4,23 @@ Rails.application.routes.draw do
   devise_for :users
   # resources :posts
   resources :subscribers
-  resources :users
+
   resources :posts do
     resources :tasties
     resources :yummies
+    resources :favorites
   end
-  # get 'about/index'
-  # get 'welcome/index', to: 'welcome#index'
-  # root 'welcome#index'
-  # root 'posts#index'
-  get 'partners/index'
-  get 'landing/index', to: 'landing#index'
-  get 'users/index'
-
 
   get 'posts/index'
-  get 'welcome', to: 'welcome#index'
-  get 'about', to: 'about#index'
-  get 'styleguide', to: 'styleguide#index'
 
+  get 'about', to: 'about#index'
+  get 'welcome', to: 'welcome#index'
+  get 'landing/index', to: 'landing#index'
+  get 'partners/index', to: 'partners#index'
+  get 'styleguide', to: 'styleguide#index'
   root 'landing#index'
+
+  get 'users', to: 'users#index'
+  get 'users/:id' => 'users#show', :as => :user
+  delete 'users/:id', to: 'users#destroy'
 end

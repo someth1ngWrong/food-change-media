@@ -39,6 +39,9 @@
   <%= @post.content.html_safe %>
 </p>
 <p>
+  <%= button_to 'Add to Favorite', post_favorites_path(@post), method: :post %>
+</p>
+<p>
   <%= @post.tasties.count %> <%= (@post.tasties.count) == 1 ? 'Tasty' : 'Tasties'%>
 </p>
 

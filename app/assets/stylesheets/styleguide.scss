@@ -17,4 +17,162 @@
 body {
   background: var(--main-white);
   overflow-x: hidden;
+
+  font-family: "Inter";
+  color: var(--main-black);
 }
+
+// mixin
+
+@mixin h1 {
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: -0.1em;
+  text-transform: uppercase;
+
+  padding-top: 6vh;
+  padding-left: 5vw;
+}
+
+@mixin h3--p {
+  font-size: 14px;
+  width: 95vw;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+
+  padding-left: 5vw;
+}
+
+$margin--top--x: 3vh;
+$margin--top--2x: 6vh;
+
+
+
+
+// styles---------------
+
+.conception {
+  height: 100vh;
+
+  background: var(--main-black);
+
+  .conception__div {
+    h1{
+      @include h1;
+      color: var(--main-white);
+    }
+
+    p {
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 120%;
+      letter-spacing: -0.05em;
+      width: 95vw;
+
+      color: var(--main-white);
+
+      padding-left: 5vw;
+      margin-top: $margin--top--x;
+
+    }
+  }
+}
+
+.logo {
+  .logo__one{
+    h1 {
+      @include h1;
+    }
+
+    p {
+      @include h3--p;
+      margin-top: $margin--top--x;
+    }
+
+    h3 {
+      @include h3--p;
+      margin-top: $margin--top--2x;
+    }
+
+    .essen__logo__big-small,
+    .essen__logo__black__v1,
+    .essen__logo__black__v2__v3 {
+      display: block;
+      margin-top: $margin--top--x;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .logo__two {
+
+    p {
+      @include h3--p;
+      margin-top: $margin--top--2x;
+    }
+
+    .essen__logo__tile__div {
+      margin-top: $margin--top--x;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .essen__logo__tile {
+      width: 50vw;
+    }
+  }
+
+  .logo__three {
+    h3 {
+      @include h3--p;
+      margin-top: $margin--top--2x;
+    }
+
+    .essen__logo__blueprint {
+      display: block;
+      margin-top: $margin--top--x;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90vw;
+      // transform: translateX(-1vw);
+    }
+
+    ol {
+      margin-top: $margin--top--x;
+      @include h3--p;
+      padding-left: 9vw;
+      list-style: decimal;
+    }
+  }
+
+  .logo__four {
+    margin-top: $margin--top--x;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .essen__logo__wrong {
+    width: 50vw;
+    padding: 8vw;
+
+  }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

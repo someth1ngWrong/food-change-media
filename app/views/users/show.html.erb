@@ -1,0 +1,11 @@
+<p>ID <%= @user.id %></p>
+<p>Email <%= @user.email %></p>
+
+In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Post' : 'Posts'%>
+<% @posts.each do |post| %>
+  <br><%= link_to post.title, post %>
+<% end %>
+
+<% if user_signed_in? && @user.id == current_user.id %>
+	<p><%= link_to 'Edit profile', edit_user_registration_path %></p>
+<% end %>

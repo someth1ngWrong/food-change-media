@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_18_021546) do
+ActiveRecord::Schema.define(version: 2020_12_18_183453) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,25 @@ ActiveRecord::Schema.define(version: 2020_12_18_021546) do
     t.boolean "display_in_navbar", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string "data_file_name", null: false
+    t.string "data_content_type"
+    t.integer "data_file_size"
+    t.string "type", limit: 30
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_favorites_on_post_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "like_defs", force: :cascade do |t|
@@ -80,6 +99,8 @@ ActiveRecord::Schema.define(version: 2020_12_18_021546) do
     t.index ["user_id"], name: "index_yummies_on_user_id"
   end
 
+  add_foreign_key "favorites", "posts"
+  add_foreign_key "favorites", "users"
   add_foreign_key "like_defs", "posts"
   add_foreign_key "like_defs", "users"
   add_foreign_key "posts", "categories"
