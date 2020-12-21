@@ -21,7 +21,7 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= image_tag(post.image.url, alt: 'Image')%></td>
+        <td><%= image_tag(post.image.url, alt: 'Image') if post.image? %> </td>
         <td><%= post.title %></td>
         <td><%= post.category.name %></td>
         <td><%= post.name %></td>
