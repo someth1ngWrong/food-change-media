@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Refood</title>
+    <title>Essen</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <% if notice %>
-      <%= notice %>
-    <% end %>
+<!-- if notice -->
+ <!-- notice  -->
+ <!-- end  -->
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
@@ -24,21 +24,22 @@
   </head>
 
   <body>
+    <div class="top_menu">
+      <%= image_tag 'logo-bw', class: 'top_menu__logo'%>
+      <% Category.where(display_in_navbar: true).each do |cat| %>
+      <%= link_to cat.name, posts_path(category: cat.name) %>
+      <% end %>
+      <% if user_signed_in? %>
+      <%= link_to 'Профиль', edit_user_registration_path %><%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+      <% else %>
+      <%= link_to 'Войти', new_user_session_path %>  <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+      <% end %>
+    </div>
     <% if notice %>
     <p class="notice"><%= notice %></p>
     <% elsif alert %>
     <p class="alert"><%= alert %></p>
     <% end %>
     <%= yield %>
-    <div class="top_menu">
-      <% Category.where(display_in_navbar: true).each do |cat| %>
-      <%= link_to cat.name, posts_path(category: cat.name) %> |
-      <% end %>||||||||
-    <% if user_signed_in? %>
-      <%= link_to 'Профиль', current_user %> | <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Войти', new_user_session_path %> | <%= link_to 'Зарегистрироваться', new_user_registration_path %>
-    <% end %>
-</div>
   </body>
 </html>

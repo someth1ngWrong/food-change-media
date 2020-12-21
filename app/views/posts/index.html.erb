@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="test">Posts</h1>
-<%= link_to 'New Post', new_post_path, class: 'btn_new-post' %>
-<%= link_to 'New Category', new_category_path %>
-<h2>All Categories</h2>
-<% Category.all.each do |cat| %>
-<%= link_to cat.name, posts_path(category: cat.name) %> <br>
-<% end %>
-<table>
+<%= link_to 'Новый пост', new_post_path, class: 'btn_new-post' %>
+ <!-- link_to 'Новая категория', new_category_path, class: 'btn_new-cat' %> %> -->
+<h1 class="test">Рецепты</h1>
+<!-- <.h2>Все катагории</h2> -->
+  <!-- Category.all.each do |cat|  %> -->
+  <!-- link_to cat.name, posts_path(category: cat.name) %> <br> %> end %> %> -->
+<table class="posts__main">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Title</th>
-      <th>Time</th>
-      <th>Image</th>
+      <th></th>
+      <th>Название</th>
+      <th>Категория</th>
+      <th>Автор</th>
+      <th>Действие</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,22 +21,16 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.name %></td>
+        <td><%= image_tag(post.image.url, alt: 'Image')%></td>
         <td><%= post.title %></td>
         <td><%= post.category.name %></td>
-        <td><%= post.time %></td>
-        <td><%= image_tag(post.image.url, alt: 'Image') if post.image? %> </td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= post.name %></td>
+        <td><%= link_to 'Посмотреть', post %> <br>
+        <%= link_to 'Редактировать', edit_post_path(post) %><br>
+        <%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<div class="btn__back">
-<%= link_to "Refood", welcome_path %>
-<%= link_to "О сервисе", about_path %>
-</div>
 
 <br>
