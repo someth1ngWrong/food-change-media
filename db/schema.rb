@@ -32,16 +32,6 @@ ActiveRecord::Schema.define(version: 2020_12_21_205607) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "ckeditor_assets", force: :cascade do |t|
-    t.string "data_file_name", null: false
-    t.string "data_content_type"
-    t.integer "data_file_size"
-    t.string "type", limit: 30
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["type"], name: "index_ckeditor_assets_on_type"
-  end
-
   create_table "favorites", force: :cascade do |t|
     t.integer "post_id", null: false
     t.integer "user_id", null: false
@@ -98,7 +88,6 @@ ActiveRecord::Schema.define(version: 2020_12_21_205607) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "isadmin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
