@@ -5,6 +5,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.top_menu {
+  display: none !important;
+}
+
 :root {
   --main-black: #272727;
   --main-white: #F8F5E8;
@@ -54,7 +58,7 @@ body {
     letter-spacing: 0em;
     text-align: center;
 
-    padding: 10%;
+    // padding: 10%;
 
     position: absolute;
     top: 56%;
@@ -127,7 +131,7 @@ body {
 .section__two {
   height: 100vh;
 
-  background: var(--main-black);
+  background: var(--main-purple);
 
   h2 {
     font-family: "Inter";
@@ -142,10 +146,10 @@ body {
     -ms-hyphens: auto;
 
     padding: 7%;
-    color: var(--main-white);
+    color: var(--main-black);
 
     span {
-      color: var(--main-yellow);
+      color: var(--main-white);
       border-radius: 0;
       background: none;
     }
@@ -491,10 +495,13 @@ body {
       font-size: 14px;
       line-height: 145%;
       letter-spacing: -0.02em;
-      background: none;
+      text-decoration: none;
+
       padding: 10px 0;
       padding-right: 10px;
       margin: 0;
+
+      background: none;
 
       color: #F8F5E8;
     }
@@ -553,7 +560,7 @@ body {
 
     > div {
       height: 50vh;
-      width: 50vw;
+      width: 49.5vw;
     }
 
     > .section__four__one > h2,
@@ -638,8 +645,11 @@ body {
     .section__nine__a {
       flex-flow: wrap;
       margin: 2% 0 0 3%;
+      width: 90vw;
+
       a {
         padding-right: 50px;
+        font-size: 18px;
       }
     }
   }

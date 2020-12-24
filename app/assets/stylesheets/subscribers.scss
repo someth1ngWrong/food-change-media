@@ -62,6 +62,7 @@
 
 @media (min-width: 1024px) {
   .new_subscriber {
+    padding-bottom: 5%;
     #subscriber_email {
       @include mailer;
       height: 20vh;
@@ -69,6 +70,21 @@
     }
     input {
       height: 20vh;
+      font-size: 22px;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .new_subscriber {
+    padding-bottom: 7%;
+    #subscriber_email {
+      @include mailer;
+      height: 25vh;
+      font-size: 22px;
+    }
+    input {
+      height: 25vh;
       font-size: 22px;
     }
   }
