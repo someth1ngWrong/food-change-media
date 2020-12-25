@@ -20,31 +20,127 @@ body {
 
   font-family: "Inter";
   color: var(--main-black);
+
+//   h3 {
+//     font-weight: bold;
+//   }
 }
 
 // mixin
-
-@mixin h1 {
-  font-size: 34px;
-  font-weight: 500;
-  letter-spacing: -0.1em;
-  text-transform: uppercase;
-
-  padding-top: 6vh;
-  padding-left: 5vw;
-}
-
-@mixin h3--p {
-  font-size: 14px;
-  width: 95vw;
-  line-height: 120%;
-  letter-spacing: -0.05em;
-
-  padding-left: 5vw;
-}
-
 $margin--top--x: 3vh;
 $margin--top--2x: 6vh;
+
+$margin--top--1440--x: 6vh;
+$margin--top--1440--2x: 12vh;
+
+@mixin styles ($type_of_tag) {
+
+
+  @media (min-width: 768px) {
+    @if $type_of_tag == h1 {
+      font-size: 54px;
+      font-weight: 500;
+      letter-spacing: -0.1em;
+      text-transform: uppercase;
+
+      padding-top: 6vh;
+      padding-left: 5vw;
+    }
+
+    @if $type_of_tag == h3 {
+      font-size: 18px;
+      width: 50vw;
+      line-height: 120%;
+      letter-spacing: -0.05em;
+      font-weight: bold;
+
+      padding-left: 5vw;
+      margin-top: $margin--top--2x;
+
+    }
+    @if $type_of_tag == p {
+      font-size: 18px;
+      width: 50vw;
+      font-weight: 500;
+      line-height: 120%;
+      letter-spacing: -0.05em;
+
+      padding-left: 5vw;
+      margin-top: $margin--top--x;
+    }
+  }
+
+  @if $type_of_tag == h1 {
+
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -0.1em;
+    text-transform: uppercase;
+
+    padding-top: 6vh;
+    padding-left: 5vw;
+  }
+
+  @if $type_of_tag == h3 {
+    font-size: 14px;
+    width: 95vw;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+    font-weight: bold;
+
+    padding-left: 5vw;
+    margin-top: $margin--top--2x;
+
+  }
+  @if $type_of_tag == p {
+    font-size: 14px;
+    width: 95vw;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+
+    padding-left: 5vw;
+    margin-top: $margin--top--x;
+  }
+
+  @media (min-width: 1440px) {
+
+    @if $type_of_tag == h1 {
+      font-size: 64px;
+      font-weight: 500;
+      letter-spacing: -0.1em;
+      text-transform: uppercase;
+
+      padding-top: 6vh;
+      padding-left: 5vw;
+    }
+
+    @if $type_of_tag == h3 {
+      font-size: 22px;
+      width: 40vw;
+      line-height: 120%;
+      letter-spacing: -0.05em;
+      font-weight: bold;
+
+      padding-left: 5vw;
+      margin-top: $margin--top--1440--2x;
+
+    }
+    @if $type_of_tag == p {
+      font-size: 22px;
+      width: 40vw;
+      font-weight: 500;
+      line-height: 120%;
+      letter-spacing: -0.05em;
+
+      padding-left: 5vw;
+      margin-top: $margin--top--1440--x;
+    }
+  }
+
+}
+
+
 
 
 
@@ -58,7 +154,7 @@ $margin--top--2x: 6vh;
 
   .conception__div {
     h1{
-      @include h1;
+      @include styles(h1);
       color: var(--main-white);
     }
 
@@ -81,16 +177,16 @@ $margin--top--2x: 6vh;
 .logo {
   .logo__one{
     h1 {
-      @include h1;
+      @include styles(h1);
     }
 
     p {
-      @include h3--p;
+      @include styles(p);
       margin-top: $margin--top--x;
     }
 
     h3 {
-      @include h3--p;
+      @include styles(h3);
       margin-top: $margin--top--2x;
     }
 
@@ -107,11 +203,12 @@ $margin--top--2x: 6vh;
   .logo__two {
 
     p {
-      @include h3--p;
+      @include styles(p);
       margin-top: $margin--top--2x;
     }
 
     .essen__logo__tile__div {
+      width: 100vw;
       margin-top: $margin--top--x;
       display: flex;
       flex-wrap: wrap;
@@ -124,7 +221,7 @@ $margin--top--2x: 6vh;
 
   .logo__three {
     h3 {
-      @include h3--p;
+      @include styles(h3);
       margin-top: $margin--top--2x;
     }
 
@@ -139,7 +236,7 @@ $margin--top--2x: 6vh;
 
     ol {
       margin-top: $margin--top--x;
-      @include h3--p;
+      @include styles(p);
       padding-left: 9vw;
       list-style: decimal;
     }
@@ -156,7 +253,919 @@ $margin--top--2x: 6vh;
     padding: 8vw;
 
   }
+}
 
+.colors {
+  background: var(--main-black);
+  color: var(--main-white);
+
+  .colors__one
+  h1 {
+    @include styles(h1);
+  }
+
+  p {
+    @include styles(p);
+    margin-top: $margin--top--x;
+  }
+
+  .colors__two {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $margin--top--x;
+
+    width: 100vw;
+
+
+    div {
+      width: 50vw;
+      height: 20vh;
+
+      h1 {
+        font-size: 14px;
+        text-transform: uppercase;
+
+        padding-top: 3vw;
+        padding-left: 3vw;
+      }
+
+      p {
+        font-size: 12px;
+        margin-top: 10px;
+
+        padding-left: 3vw;
+      }
+    }
+
+    .color__tile__one {
+      background-color: var(--main-white);
+      color: var(--main-black);
+    }
+    .color__tile__two {
+      background-color: var(--main-black);
+      border-top: 1px solid var(--main-white);
+    }
+    .color__tile__three {
+      background-color: var(--main-purple);
+    }
+    .color__tile__four {
+      background-color: var(--main-yellow);
+      color: var(--main-black);
+    }
+    .color__tile__five {
+      background-color: var(--main-red);
+    }
+    .color__tile__six {
+      background-color: var(--main-green);
+      color: var(--main-black);
+    }
+  }
+
+  .colors__three {
+    h3 {
+      @include styles(h3);
+      margin-top: $margin--top--2x;
+    }
+
+    p {
+      @include styles(p);
+      margin-top: $margin--top--x;
+    }
+  }
+
+  .colors__four {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100vw;
+
+
+    margin-top: $margin--top--x;
+
+    div {
+      width: 33.3vw;
+      height: 18vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .essen__logo__wrong {
+      width: 20vw;
+
+    }
+
+    .wrong__tile__orange {
+      background-color: var(--main-red);
+    }
+    .wrong__tile__green {
+      background-color: var(--main-green);
+    }
+    .wrong__tile__purpule {
+      background-color: var(--main-purple);
+    }
+
+    .cross {
+      position: absolute;
+      width: 100vw;
+
+
+    }
+  }
+}
+
+.composition {
+  background: var(--main-red);
+  color: var(--main-white);
+
+  padding-bottom: 8vw;
+
+  h1 {
+    @include styles(h1);
+  }
+
+  h3 {
+    @include styles(h3);
+    margin-top: $margin--top--2x;
+  }
+
+  .composition__one{
+
+    p {
+      @include styles(p);
+      margin-top: $margin--top--x;
+
+      span {
+        color: var(--main-black);
+        background: none;
+      }
+    }
+
+    .essen__grid__blueprint {
+      display: block;
+      margin-top: $margin--top--x;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90vw;
+    }
+
+    .description {
+      margin-top: 0px;
+    }
+  }
+
+  .composition__two {
+
+    p {
+      @include styles(p);
+      margin-top: 15px;
+    }
+
+    .outdoor__ad {
+      display: block;
+      margin-top: $margin--top--x;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90vw;
+    }
+
+    #outdoor__ad__three{
+      margin-top: $margin--top--2x;
+    }
+  }
+
+  .composition__three {
+
+    p{
+      @include styles(p);
+      margin-top: 15px;
+    }
+
+    .outdoor__ad__box {
+      margin-top: $margin--top--2x;
+    }
+
+    .socialnetwork__ad {
+      display: block;
+      margin-top: $margin--top--x;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90vw;
+    }
+  }
+}
+
+.fonts {
+  background: var(--main-yellow);
+
+  h1 {
+    @include styles(h1);
+  }
+
+  .fonts__one{
+    h3 {
+      @include styles(h3);
+    }
+    ol {
+      margin-top: $margin--top--x;
+      @include styles(p);
+      padding-left: 9vw;
+      list-style: decimal;
+    }
+  }
+
+  .fonts__two,
+  .fonts__three,
+  .fonts__four,
+  .fonts__five {
+    h1 {
+      font-size: 54px;
+
+
+    }
+
+    p {
+      @include styles(p);
+    }
+
+    p:first-of-type {
+      margin-top: 14px;
+    }
+  }
+  .fonts__five {
+    padding-bottom: 8vw;
+  }
+
+
+
+  .fonts__six {
+    background: var(--main-green);
+    padding-bottom: 8vw;
+    width: 100vw;
+
+
+    .txt__big,
+    .txt__medium,
+    .txt__small {
+      display: flex;
+      flex-wrap: wrap;
+
+      padding-top: $margin--top--x;
+
+      p {
+        padding-left: 5vw;
+      }
+
+      .txt__big__left,
+      .txt__medium__left,
+      .txt__small__left {
+        width: 50vw;
+
+      }
+      .txt__big__right,
+      .txt__medium__right,
+      .txt__small__right {
+        width: 50vw;
+      }
+
+      .txt__big__left {
+        p {
+          font-size: 42px;
+          font-weight: 500;
+          letter-spacing: -0.1em;
+          line-height: 91%
+        }
+      }
+      .txt__big__right {
+        p {
+          font-size: 42px;
+          font-weight: 500;
+          letter-spacing: -0.1em;
+          line-height: 91%
+        }
+        p:nth-of-type(2) {
+          font-size: 23px;
+          font-weight: 500;
+          letter-spacing: -0.1em;
+
+          margin-top: 15px;
+        }
+      }
+
+      .txt__medium__left {
+        p {
+          font-size: 23px;
+          font-weight: 500;
+          letter-spacing: -0.1em;
+          line-height: 91%
+        }
+      }
+      .txt__medium__right {
+        p {
+          font-size: 23px;
+          font-weight: 500;
+          letter-spacing: -0.1em;
+          line-height: 91%
+        }
+        p:nth-of-type(2) {
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: -0.1em;
+
+          margin-top: 15px;
+        }
+      }
+
+      .txt__small__left {
+        p {
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: -0.1em;
+          line-height: 91%
+        }
+      }
+      .txt__small__right {
+        p {
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: -0.1em;
+          line-height: 91%
+        }
+        p:nth-of-type(2) {
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: -0.1em;
+
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+
+.graphics {
+  padding-bottom: 8vw;
+
+  .graphics__one{
+    h1 {
+      @include styles(h1);
+    }
+
+    p {
+      @include styles(p);
+    }
+  }
+
+  .graphics__two{
+
+    .outdoor__ad {
+      display: block;
+      margin-top: $margin--top--x;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90vw;
+    }
+
+    p {
+      @include styles(p);
+      margin-top: 15px;
+    }
+  }
+
+  .graphics__three {
+    h1 {
+      @include styles(h1);
+    }
+
+    .graphics__columns__color {
+      display: block;
+      margin-top: $margin--top--x;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90vw;
+    }
+
+    .graphics__auto__rows,
+    .graphics__back__rows {
+      display: block;
+      margin-top: $margin--top--x;
+      margin-left: auto;
+      margin-right: auto;
+      width: 84vw;
+    }
+
+     p {
+      @include styles(h1);
+      font-size: 14px;
+    }
+  }
+}
+
+.photo {
+  background: var(--main-purple);
+  padding-bottom: 8vw;
+
+  .photo__one {
+    h1 {
+      @include styles(h1);
+    }
+    p {
+      @include styles(p);
+    }
+
+    p:nth-of-type(2){
+      margin-top: 15px;
+    }
+
+    .essen__photo__blueprint {
+      display: block;
+      margin-top: $margin--top--x;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90vw;
+    }
+  }
+
+  .photo__two {
+    h3 {
+      @include styles(h3);
+    }
+
+    .photo__food {
+      display: block;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90vw;
+    }
+  }
+}
+
+//768px----------------------------------
+
+@media (min-width: 768px) {
+  .conception{
+    .conception__div{
+      p {
+        font-size: 54px;
+        width: 90vw;
+      }
+    }
+  }
+
+  .logo {
+    .logo__two{
+      // justify-content: space-between;
+      .essen__logo__tile {
+        width: 33vw;
+      }
+
+      .essen__logo__tile:nth-of-type(3) {
+        border-top: 1px solid var(--main-black);
+      }
+    }
+  }
+
+  .colors {
+    .colors__two {
+      div {
+        width: 33.3vw;
+      }
+    }
+  }
+
+  .composition {
+    .composition__two {
+      .outdoor__ad__box__one{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 90vw;
+
+        .outdoor__ad {
+          width: 43vw;
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+
+      .outdoor__ad__box__two {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 90vw;
+
+        .outdoor__ad__box__left,
+        .outdoor__ad__box__right {
+          width: 43vw;
+          p {
+            padding: 0;
+            width: 43vw;
+          }
+        }
+
+        #outdoor__ad__three {
+          margin-top: 0;
+        }
+
+        .outdoor__ad {
+          width: 43vw;
+          margin-top: 0;
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+
+    .composition__three {
+      .outdoor__ad__box{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 90vw;
+
+        .socialnetwork__ad {
+          width: 43vw;
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .fonts {
+    .fonts__two,
+    .fonts__three,
+    .fonts__four,
+    .fonts__five {
+      display: flex;
+      flex-wrap: wrap;
+
+      margin-top: $margin--top--2x;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90vw;
+      .fonts__box__left {
+        width: 45vw;
+
+        h1,
+        p {
+          padding: 0;
+          width: 42vw;
+        }
+      }
+
+      .fonts__box__right {
+        width: 45vw;
+
+        p {
+          width: 42vw;
+          margin: 0;
+        }
+      }
+    }
+
+    .fonts__six {
+      .txt__big {
+        padding-top: 10vh;
+        .txt__big__left{
+          p {
+            font-size: 80px;
+          }
+        }
+
+        .txt__big__right {
+          p {
+            font-size: 80px
+          }
+
+          p:nth-of-type(2) {
+            font-size: 45px;
+          }
+        }
+      }
+      .txt__medium {
+        padding-top: 10vh;
+        .txt__medium__left{
+          p {
+            font-size: 45px;
+          }
+        }
+
+        .txt__medium__right {
+          p {
+            font-size: 45px
+          }
+
+          p:nth-of-type(2) {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .txt__small {
+        padding-top: 10vh;
+        .txt__small__left{
+          p {
+            font-size: 18px;
+          }
+        }
+
+        .txt__small__right {
+          p {
+            font-size: 18px
+          }
+
+          p:nth-of-type(2) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .graphics {
+    .graphics__two {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      margin-top: $margin--top--2x;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90vw;
+
+      div {
+        width: 45vw;
+
+        p {
+          padding: 0;
+          width: 40vw;
+
+        }
+
+        .outdoor__ad {
+          width: 43vw;
+          margin: 0;
+        }
+      }
+    }
+
+    .graphics__three {
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .photo {
+    .photo__two {
+      div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 90vw;
+
+      }
+
+      .photo__food {
+        width: 21vw;
+        margin-top: 10px;
+      }
+
+    }
+  }
+}
+
+//1024px----------------------------------
+
+@media (min-width: 1024px) {
+  .conception{
+    .conception__div{
+      p {
+        font-size: 64px;
+        width: 90vw;
+      }
+    }
+  }
+
+  .logo {
+    .logo__one {
+      h3 {
+      }
+      .essen__logo__big-small,
+      .essen__logo__black__v1,
+      .essen__logo__black__v2__v3 {
+        width: 45vw;
+        margin-top: $margin--top--1440--2x;
+
+      }
+    }
+
+    .logo__two {
+      .essen__logo__tile__div {
+        margin-top:$margin--top--1440--2x;
+      }
+    }
+
+    .logo__three {
+      .essen__logo__blueprint{
+        width: 50vw;
+      }
+    }
+
+    .logo__four {
+      justify-content: space-between;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90vw;
+      .essen__logo__wrong{
+        width: 22vw;
+        padding: 3vw;
+      }
+    }
+  }
+
+  .colors {
+    .colors__two {
+      width: 100vw;
+      div {
+        height: 40vh;
+
+        h1 {
+          font-size: 34px;
+        }
+
+        p {
+          font-size: 22px;
+
+        }
+      }
+    }
+  }
+
+  .composition {
+    .composition__one {
+      .description {
+        padding-left: 25vw;
+        width: 50vw;
+      }
+      .essen__grid__blueprint{
+        width: 50vw;
+      }
+    }
+
+    .composition__three {
+      .outdoor__ad__box {
+        justify-content: start;
+        .socialnetwork__ad {
+          width: 20vw;
+        }
+        .socialnetwork__ad:nth-of-type(2) {
+          margin-left: 5vw;
+        }
+      }
+    }
+  }
+
+  .fonts {
+    .fonts__two {
+      // margin-top: 15vw;
+      .fonts__box__left {
+        h1 {
+          font-size: 143px;
+        }
+      }
+    }
+
+    .fonts__three {
+      margin-top: 15vw;
+      .fonts__box__left {
+        h1 {
+          font-size: 143px;
+        }
+      }
+    }
+
+    .fonts__four {
+      margin-top: 15vw;
+      .fonts__box__left {
+        h1 {
+          font-size: 143px;
+        }
+      }
+    }
+
+    .fonts__five {
+      margin-top: 15vw;
+      .fonts__box__left {
+        h1 {
+          font-size: 143px;
+        }
+      }
+    }
+
+    .fonts__six {
+      .txt__big{
+        .txt__big__left{
+          p {
+            font-size: 143px;
+          }
+        }
+        .txt__big__right {
+          p {
+            font-size: 143px;
+          }
+
+          p:nth-of-type(2) {
+            font-size: 66px;
+          }
+        }
+      }
+      .txt__medium{
+        .txt__medium__left{
+          p {
+            font-size: 66px;
+          }
+        }
+        .txt__medium__right {
+          p {
+            font-size: 66px;
+          }
+
+          p:nth-of-type(2) {
+            font-size: 22px;
+          }
+        }
+      }
+      .txt__small{
+        .txt__small__left{
+          p {
+            font-size: 22px;
+          }
+        }
+        .txt__small__right {
+          p {
+            font-size: 22px;
+          }
+
+          p:nth-of-type(2) {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  .graphics {
+    .graphics__two {
+      justify-content: start;
+      div {
+        width: 30vw;
+        .outdoor__ad {
+          width: 20vw;
+        }
+      }
+      div:nth-of-type(2) {
+        margin-left: 5vw;
+      }
+    }
+
+    .graphics__three {
+      margin-top: $margin--top--1440--2x;
+      p {
+        font-size: 22px;
+        margin-top: $margin--top--1440--2x
+      }
+    }
+  }
+
+  .photo {
+    .photo__one {
+      p:nth-of-type(2) {
+        padding-left: 25vw;
+        width: 50vw;
+      }
+
+      .essen__photo__blueprint {
+        width: 50vw;
+      }
+
+
+    }
+  }
 
 
 
@@ -175,4 +1184,5 @@ $margin--top--2x: 6vh;
 
 
 
-//
+
+//EOF

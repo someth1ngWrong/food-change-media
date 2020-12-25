@@ -10,6 +10,7 @@
       <div class="conception__div">
         <h1>Концепция</h1>
         <p>Основной метафорой айдентики выступает замена. Как ингредиенты&nbsp;заменяются в&nbsp;рецепте, так и&nbsp;глифы заменяются в&nbsp;словах. В&nbsp;качестве дополнительной графики используются простые геометрические фигуры, олицетворяющие нарезанные продукты.</p>
+
       </div>
     </section>
 
@@ -29,7 +30,7 @@
         </div>
 
         <div class="logo__two">
-          <p>Вариативный логотип используется на&nbsp;нескольких рядомстоящих носителях или повторяется на&nbsp;одном носителе несколько раз как паттерн. Например, вывеска серии афиш на&nbsp;стене.</p>
+          <p>Вариативный логотип используется на&nbsp;нескольких рядом стоящих носителях или повторяется на&nbsp;одном носителе несколько раз как паттерн. Например, вывеска серии афиш на&nbsp;стене.</p>
           <div class="essen__logo__tile__div">
             <%= image_tag 'essen__logo__tile__one', class: 'essen__logo__tile'%>
             <%= image_tag 'essen__logo__tile__two', class: 'essen__logo__tile'%>
@@ -103,25 +104,27 @@
       </div>
 
       <div class="colors__four">
+
+        <div class="wrong__tile__orange">
+          <%= image_tag 'essen__logo__wrong__green', class: 'essen__logo__wrong'%>
+        </div>
+        <div class="wrong__tile__purpule">
+          <%= image_tag 'essen__logo__wrong__orange', class: 'essen__logo__wrong'%>
+        </div>
+        <div class="wrong__tile__orange">
+          <%= image_tag 'essen__logo__wrong__purpule', class: 'essen__logo__wrong'%>
+        </div>
+        <div class="wrong__tile__green">
+          <%= image_tag 'essen__logo__wrong__orange', class: 'essen__logo__wrong'%>
+        </div>
+        <div class="wrong__tile__purpule">
+          <%= image_tag 'essen__logo__wrong__green', class: 'essen__logo__wrong'%>
+        </div>
+        <div class="wrong__tile__green">
+          <%= image_tag 'essen__logo__wrong__purpule', class: 'essen__logo__wrong'%>
+        </div>
+
         <%= image_tag 'cross', class: 'cross'%>
-        <div class="wrong__tile__green__orange">
-          <%= image_tag 'essen__logo__wrong__green', class: 'essen__logo__wrong__green'%>
-        </div>
-        <div class="wrong__tile__orange__purpule">
-          <%= image_tag 'essen__logo__wrong__orange', class: 'essen__logo__wrong__orange'%>
-        </div>
-        <div class="wrong__tile__purpule__orange">
-          <%= image_tag 'essen__logo__wrong__purpule', class: 'essen__logo__wrong__purpule'%>
-        </div>
-        <div class="wrong__tile__orange__green">
-          <%= image_tag 'essen__logo__wrong__orange', class: 'essen__logo__wrong__orange'%>
-        </div>
-        <div class="wrong__tile__green__purpule">
-          <%= image_tag 'essen__logo__wrong__green', class: 'essen__logo__wrong__green'%>
-        </div>
-        <div class="wrong__tile__purpule__green">
-          <%= image_tag 'essen__logo__wrong__purpule', class: 'essen__logo__wrong__purpule'%>
-        </div>
       </div>
     </section>
 
@@ -130,29 +133,43 @@
         <h1>Композиционные<br>схемы</h1>
         <p>Каждый носитель может содержать в себе только одну фигуру, она может быть как внутри носителя, так и выходить в обрез. Фигуры делятся на два типа: автономные и фоновые. Об этом далее в разделе <span>дополнительная графика</span>.</p>
         <%= image_tag 'essen__grid__blueprint', class: 'essen__grid__blueprint'%>
-        <p>margin = 1.5x logo letter</p>
+        <p class="description">margin = 1.5x logo letter</p>
       </div>
 
       <div class="composition__two">
         <h3>Наружная реклама</h3>
-        <%= image_tag 'outdoor__ad__one', class: 'outdoor__ad__one'%>
-        <%= image_tag 'outdoor__ad__two', class: 'outdoor__ad__two'%>
+        <div class="outdoor__ad__box__one">
+          <%= image_tag 'outdoor__ad__one', class: 'outdoor__ad'%>
+          <%= image_tag 'outdoor__ad__two', class: 'outdoor__ad'%>
+        </div>
         <p>Формат 4:5; используется 5-колончатая сетка</p>
 
-        <%= image_tag 'outdoor__ad__three', class: 'outdoor__ad__three'%>
-        <p>Квадратный единичный постер с&nbsp;автономной фигурой: Формат&nbsp;1:1; 4-колончатая сетка</p>
-        <%= image_tag 'outdoor__ad__four', class: 'outdoor__ad__four'%>
-        <p>Квадратный двойной постер с&nbsp;фоновой фигурой: Формат&nbsp;1:1; 5-колончатая сетка</p>
+        <div class="outdoor__ad__box__two">
+
+          <div class="outdoor__ad__box__left">
+
+            <%= image_tag 'outdoor__ad__three', class: 'outdoor__ad', id:'outdoor__ad__three'%>
+            <p>Квадратный единичный постер с&nbsp;автономной фигурой: Формат&nbsp;1:1; 4-колончатая сетка</p>
+          </div>
+
+          <div class="outdoor__ad__box__right">
+            <%= image_tag 'outdoor__ad__four', class: 'outdoor__ad'%>
+            <p>Квадратный двойной постер с&nbsp;фоновой фигурой: Формат&nbsp;1:1; 5-колончатая сетка</p>
+          </div>
+        </div>
       </div>
 
       <div class="composition__three">
         <h3>Социальные сети</h3>
-        <%= image_tag 'socialnetwork__one', class: 'socialnetwork__one'%>
-        <%= image_tag 'socialnetwork__two', class: 'socialnetwork__two'%>
+        <%= image_tag 'socialnetwork__one', class: 'socialnetwork__ad'%>
+        <%= image_tag 'socialnetwork__two', class: 'socialnetwork__ad'%>
         <p>Формат 16:9. Используется 8-колончатая сетка</p>
 
-        <%= image_tag 'socialnetwork__three', class: 'socialnetwork__three'%>
-        <%= image_tag 'socialnetwork__four', class: 'socialnetwork__four'%>
+        <div class="outdoor__ad__box">
+          <%= image_tag 'socialnetwork__three', class: 'socialnetwork__ad'%>
+          <%= image_tag 'socialnetwork__four', class: 'socialnetwork__ad'%>
+        </div>
+
         <p>Instagram Stories</p>
       </div>
     </section>
@@ -168,63 +185,105 @@
       </div>
 
       <div class="fonts__two">
-        <h1>Inter<br>Medium</h1>
-        <p>Используется как основное начертание</p>
-        <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz Аа Бб Вв Гг Дд Ее Ёё Жж Зз Ии Кк Лл Мм Нн Оо Пп Рр Сс Тт Уу Фф Хх Цц Чч Шш Щщ Ъъ Ыы Ьь Ээ Юю Яя 1 2 3 4 5 6 7 8 9 « » „ “ : ; ? ! @ # $ % & * ( )</p>
+        <div class="fonts__box__left">
+          <h1>Inter<br>Medium</h1>
+          <p>Используется как основное начертание</p>
+        </div>
+        <div class="fonts__box__right">
+          <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz Аа Бб Вв Гг Дд Ее Ёё Жж Зз Ии Кк Лл Мм Нн Оо Пп Рр Сс Тт Уу Фф Хх Цц Чч Шш Щщ Ъъ Ыы Ьь Ээ Юю Яя 1 2 3 4 5 6 7 8 9 « » „ “ : ; ? ! @ # $ % & * ( )</p>
+        </div>
       </div>
 
       <div class="fonts__three">
-        <h1>BASE<br>&BLOOM</h1>
-        <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz Аа Бб Вв Гг Дд Ее Ёё Жж Зз Ии Кк Лл Мм Нн Оо Пп Рр Сс Тт Уу Фф Хх Цц Чч Шш Щщ Ъъ Ыы Ьь Ээ Юю Яя 1 2 3 4 5 6 7 8 9 « » „ “ : ; ? ! @ # $ % & * ( )</p>
+        <div class="fonts__box__left">
+          <h1>BASE<br>&BLOOM</h1>
+        </div>
+        <div class="fonts__box__right">
+          <p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz Аа Бб Вв Гг Дд Ее Ёё Жж Зз Ии Кк Лл Мм Нн Оо Пп Рр Сс Тт Уу Фф Хх Цц Чч Шш Щщ Ъъ Ыы Ьь Ээ Юю Яя 1 2 3 4 5 6 7 8 9 « » „ “ : ; ? ! @ # $ % & * ( )</p>
+        </div>
+
       </div>
 
       <div class="fonts__four">
-        <h1>Glyph-<br>world<br>Mountain</h1>
-        <p>Начертание может использоваться в&nbsp;замене кириллических глифов, идентичных по&nbsp;начертанию латинским символам</p>
-        <p>A b c d e f g h i j K k L M N O P Q R S T U V W x y z « » „ “ : ; ? ! @ # $ % & * ( )</p>
+        <div class="fonts__box__left">
+          <h1>Glyph-<br>world<br>Mountain</h1>
+          <p>Начертание может использоваться в&nbsp;замене кириллических глифов, идентичных по&nbsp;начертанию латинским символам</p>
+        </div>
+        <div class="fonts__box__right">
+          <p>A b c d e f g h i j K k L M N O P Q R S T U V W x y z « » „ “ : ; ? ! @ # $ % & * ( )</p>
+        </div>
       </div>
 
       <div class="fonts__five">
-        <h1>Glyph-<br>world<br>Meadow</h1>
-        <p>Начертание может использоваться в&nbsp;замене кириллических глифов, идентичных по&nbsp;начертанию латинским символам</p>
-        <p>A b c d e f g h i j K k L M N O P Q R S T U V W x y z « » „ “ : ; ? ! @ # $ % & * ( )</p>
+        <div class="fonts__box__left">
+          <h1>Glyph-<br>world<br>Meadow</h1>
+          <p>Начертание может использоваться в&nbsp;замене кириллических глифов, идентичных по&nbsp;начертанию латинским символам</p>
+        </div>
+        <div class="fonts__box__right">
+          <p>A b c d e f g h i j K k L M N O P Q R S T U V W x y z « » „ “ : ; ? ! @ # $ % & * ( )</p>
+        </div>
       </div>
 
       <div class="fonts__six">
         <div class="txt__big">
-          <p>Большой<br>текст<br>6.5х</p>
-          <p>143px/<br>132px</p>
-          <p>Трекинг –7.5%</p>
+           <div class="txt__big__left">
+             <p>Большой<br>текст<br>6.5х</p>
+           </div>
+           <div class="txt__big__right">
+             <p>143px/<br>132px</p>
+             <p>Трекинг –7.5%</p>
+           </div>
         </div>
+
         <div class="txt__medium">
-          <p>Средний текст<br>3х</p>
-          <p>66px/82px</p>
-          <p>Трекинг –2%</p>
+          <div class="txt__medium__left">
+            <p>Средний текст<br>3х</p>
+          </div>
+          <div class="txt__medium__right">
+            <p>66px/82px</p>
+            <p>Трекинг –2%</p>
+          </div>
         </div>
+
         <div class="txt__small">
-          <p>Мелкий текст<br>х</p>
-          <p>22px/30px</p>
-          <p>Трекинг –2%</p>
+          <div class="txt__small__left">
+            <p>Мелкий текст<br>х</p>
+          </div>
+          <div class="txt__small__right">
+            <p>22px/30px</p>
+            <p>Трекинг –2%</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="graphics">
       <div class="graphics__one">
+        <h1>Дополнительная<br>графика</h1>
         <p>Все фигуры подразделяются на&nbsp;два типа&nbsp;&mdash; автономные и&nbsp;фоновые. Первая группа может использоваться на&nbsp;носителях как самостоятельный объект, вписывающийся по&nbsp;композиционной сетке. Вторая группа фигур используется как фон носителя, являющаяся заливкой фрейма.</p>
         <p>Графика используется в&nbsp;опредленно заданных цветах, соответствующих исходным ингредиентам. Допустимые цвета для каждой фигуры в&nbsp;таблице ниже.</p>
       </div>
 
-      <div class="">
-        <%= image_tag 'outdoor__ad__three', class: 'outdoor__ad__three'%>
-        <p>Пример использование автономных фигур</p>
-        <%= image_tag 'outdoor__ad__four', class: 'outdoor__ad__four'%>
-        <p>Пример использование фоновых фигур</p>
+      <div class="graphics__two">
+        <div class="">
+          <%= image_tag 'outdoor__ad__three', class: 'outdoor__ad'%>
+          <p>Пример использование автономных фигур</p>
+        </div>
+        <div class="">
+          <%= image_tag 'outdoor__ad__four', class: 'outdoor__ad'%>
+          <p>Пример использование фоновых фигур</p>
+        </div>
       </div>
 
-      <div class="graphics__two">
-        <h1>Таблица допустимых цветов для фигур</h1>
-        <!-- таблица -->
+      <div class="graphics__three">
+        <h1>Таблица допустимых<br>цветов для фигур</h1>
+        <%= image_tag 'graphics__columns__color', class: 'graphics__columns__color'%>
+
+        <p>Фоновые фигуры</p>
+        <%= image_tag 'graphics__auto__rows', class: 'graphics__auto__rows'%>
+
+        <p>Автономные фигуры</p>
+        <%= image_tag 'graphics__back__rows', class: 'graphics__back__rows'%>
       </div>
     </section>
 
@@ -239,14 +298,16 @@
 
       <div class="photo__two">
         <h3>Примеры подходящих фотографий</h3>
-        <%= image_tag 'photo__food__one', class: 'photo__food'%>
-        <%= image_tag 'photo__food__two', class: 'photo__food'%>
-        <%= image_tag 'photo__food__three', class: 'photo__food'%>
-        <%= image_tag 'photo__food__four', class: 'photo__food'%>
-        <%= image_tag 'photo__food__five', class: 'photo__food'%>
-        <%= image_tag 'photo__food__six', class: 'photo__food'%>
-        <%= image_tag 'photo__food__seven', class: 'photo__food'%>
-        <%= image_tag 'photo__food__eight', class: 'photo__food'%>
+        <div class="">
+          <%= image_tag 'photo__food__one', class: 'photo__food'%>
+          <%= image_tag 'photo__food__two', class: 'photo__food'%>
+          <%= image_tag 'photo__food__three', class: 'photo__food'%>
+          <%= image_tag 'photo__food__four', class: 'photo__food'%>
+          <%= image_tag 'photo__food__five', class: 'photo__food'%>
+          <%= image_tag 'photo__food__six', class: 'photo__food'%>
+          <%= image_tag 'photo__food__seven', class: 'photo__food'%>
+          <%= image_tag 'photo__food__eight', class: 'photo__food'%>
+        </div>
       </div>
     </section>
 
