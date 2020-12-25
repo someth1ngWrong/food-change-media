@@ -753,10 +753,12 @@ $margin--top--1440--2x: 12vh;
       }
 
       .outdoor__ad__box__two {
+
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
 
+        margin-top: $margin--top--2x;
         margin-left: auto;
         margin-right: auto;
         width: 90vw;
@@ -803,6 +805,13 @@ $margin--top--1440--2x: 12vh;
   }
 
   .fonts {
+    .fonts__one {
+      ol {
+        padding-left: 7vw;
+        width: 70vw;
+
+      }
+    }
     .fonts__two,
     .fonts__three,
     .fonts__four,
