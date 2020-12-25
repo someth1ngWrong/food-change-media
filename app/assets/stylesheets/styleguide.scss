@@ -21,14 +21,15 @@ body {
   font-family: "Inter";
   color: var(--main-black);
 
-//   h3 {
-//     font-weight: bold;
-//   }
+  // section {
+  //   padding-bottom: 8vh;
+  // }
 }
 
 // mixin
-$margin--top--x: 3vh;
-$margin--top--2x: 6vh;
+$margin--top--x: 1.5vh;
+$margin--top--1x: 4vh;
+$margin--top--2x: 8vh;
 
 $margin--top--1440--x: 6vh;
 $margin--top--1440--2x: 12vh;
@@ -51,7 +52,7 @@ $margin--top--1440--2x: 12vh;
       font-size: 18px;
       width: 50vw;
       line-height: 120%;
-      letter-spacing: -0.05em;
+      letter-spacing: -0.02em;
       font-weight: bold;
 
       padding-left: 5vw;
@@ -85,7 +86,7 @@ $margin--top--1440--2x: 12vh;
     font-size: 14px;
     width: 95vw;
     line-height: 120%;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.02em;
     font-weight: bold;
 
     padding-left: 5vw;
@@ -119,7 +120,7 @@ $margin--top--1440--2x: 12vh;
       font-size: 22px;
       width: 40vw;
       line-height: 120%;
-      letter-spacing: -0.05em;
+      letter-spacing: -0.01em;
       font-weight: bold;
 
       padding-left: 5vw;
@@ -148,9 +149,10 @@ $margin--top--1440--2x: 12vh;
 // styles---------------
 
 .conception {
-  height: 100vh;
+  // height: 100vh;
 
   background: var(--main-black);
+  padding-bottom: 8vh;
 
   .conception__div {
     h1{
@@ -175,6 +177,8 @@ $margin--top--1440--2x: 12vh;
 }
 
 .logo {
+  background: var(--main-white);
+  padding-bottom: 8vh;
   .logo__one{
     h1 {
       @include styles(h1);
@@ -204,18 +208,19 @@ $margin--top--1440--2x: 12vh;
 
     p {
       @include styles(p);
-      margin-top: $margin--top--2x;
+      margin-top: $margin--top--1x;
     }
 
     .essen__logo__tile__div {
       width: 100vw;
-      margin-top: $margin--top--x;
+      margin-top: $margin--top--2x;
       display: flex;
       flex-wrap: wrap;
     }
 
     .essen__logo__tile {
       width: 50vw;
+      margin: -1px;
     }
   }
 
@@ -234,16 +239,15 @@ $margin--top--1440--2x: 12vh;
       // transform: translateX(-1vw);
     }
 
-    ol {
+    p {
       margin-top: $margin--top--x;
       @include styles(p);
-      padding-left: 9vw;
-      list-style: decimal;
+      line-height: 22px;
     }
   }
 
   .logo__four {
-    margin-top: $margin--top--x;
+    margin-top: $margin--top--1x;
     display: flex;
     flex-wrap: wrap;
   }
@@ -258,6 +262,7 @@ $margin--top--1440--2x: 12vh;
 .colors {
   background: var(--main-black);
   color: var(--main-white);
+  padding: 0;
 
   .colors__one
   h1 {
@@ -266,13 +271,13 @@ $margin--top--1440--2x: 12vh;
 
   p {
     @include styles(p);
-    margin-top: $margin--top--x;
+    margin-top: $margin--top--1x;
   }
 
   .colors__two {
     display: flex;
     flex-wrap: wrap;
-    margin-top: $margin--top--x;
+    margin-top: $margin--top--1x;
 
     width: 100vw;
 
@@ -340,7 +345,7 @@ $margin--top--1440--2x: 12vh;
     width: 100vw;
 
 
-    margin-top: $margin--top--x;
+    margin-top: $margin--top--1x;
 
     div {
       width: 33.3vw;
@@ -378,7 +383,7 @@ $margin--top--1440--2x: 12vh;
   background: var(--main-red);
   color: var(--main-white);
 
-  padding-bottom: 8vw;
+  padding-bottom: 16vw;
 
   h1 {
     @include styles(h1);
@@ -403,7 +408,7 @@ $margin--top--1440--2x: 12vh;
 
     .essen__grid__blueprint {
       display: block;
-      margin-top: $margin--top--x;
+      margin-top: $margin--top--2x;
       margin-left: auto;
       margin-right: auto;
       width: 90vw;
@@ -418,12 +423,16 @@ $margin--top--1440--2x: 12vh;
 
     p {
       @include styles(p);
-      margin-top: 15px;
+      margin-top: $margin--top--x;
+    }
+
+    .outdoor__ad__box__two{
+
     }
 
     .outdoor__ad {
       display: block;
-      margin-top: $margin--top--x;
+      margin-top: $margin--top--1x;
       margin-left: auto;
       margin-right: auto;
       width: 90vw;
@@ -465,12 +474,39 @@ $margin--top--1440--2x: 12vh;
   .fonts__one{
     h3 {
       @include styles(h3);
+      margin-top: $margin--top--1x;
     }
-    ol {
+    p {
       margin-top: $margin--top--x;
       @include styles(p);
-      padding-left: 9vw;
-      list-style: decimal;
+
+    }
+  }
+  .fonts__three {
+    h1 {
+      font-family: "Base&Bloom";
+      letter-spacing: 0;
+    }
+    p {
+      font-family: "Base&Bloom";
+    }
+  }
+  .fonts__four {
+    h1 {
+      font-family: "GlyphWorld-Mountain";
+      letter-spacing: 0;
+    }
+    .fonts__lettres {
+      font-family: "GlyphWorld-Mountain";
+    }
+  }
+  .fonts__five {
+    h1 {
+      font-family: "GlyphWorld-Meadow";
+      letter-spacing: 0;
+    }
+    .fonts__lettres {
+      font-family: "GlyphWorld-Meadow"
     }
   }
 
@@ -480,9 +516,10 @@ $margin--top--1440--2x: 12vh;
   .fonts__five {
     h1 {
       font-size: 54px;
-
-
     }
+
+
+
 
     p {
       @include styles(p);
@@ -502,6 +539,7 @@ $margin--top--1440--2x: 12vh;
     background: var(--main-green);
     padding-bottom: 8vw;
     width: 100vw;
+    padding-bottom: 8vh;
 
 
     .txt__big,
@@ -510,7 +548,7 @@ $margin--top--1440--2x: 12vh;
       display: flex;
       flex-wrap: wrap;
 
-      padding-top: $margin--top--x;
+      padding-top: $margin--top--1x;
 
       p {
         padding-left: 5vw;
@@ -604,7 +642,8 @@ $margin--top--1440--2x: 12vh;
 }
 
 .graphics {
-  padding-bottom: 8vw;
+  padding-bottom: 8vh;
+  background: var(--main-white);
 
   .graphics__one{
     h1 {
@@ -620,7 +659,7 @@ $margin--top--1440--2x: 12vh;
 
     .outdoor__ad {
       display: block;
-      margin-top: $margin--top--x;
+      margin-top: $margin--top--1x;
       margin-left: auto;
       margin-right: auto;
       width: 90vw;
@@ -635,6 +674,7 @@ $margin--top--1440--2x: 12vh;
   .graphics__three {
     h1 {
       @include styles(h1);
+      padding-top: 8vh;
     }
 
     .graphics__columns__color {
@@ -656,7 +696,9 @@ $margin--top--1440--2x: 12vh;
 
      p {
       @include styles(h1);
+      letter-spacing: 0;
       font-size: 14px;
+      padding-top: $margin--top--1x ;
     }
   }
 }
@@ -668,6 +710,7 @@ $margin--top--1440--2x: 12vh;
   .photo__one {
     h1 {
       @include styles(h1);
+      width: 90vw;
     }
     p {
       @include styles(p);
@@ -679,7 +722,7 @@ $margin--top--1440--2x: 12vh;
 
     .essen__photo__blueprint {
       display: block;
-      margin-top: $margin--top--x;
+      margin-top: $margin--top--2x;
       margin-left: auto;
       margin-right: auto;
       width: 90vw;
@@ -715,6 +758,10 @@ $margin--top--1440--2x: 12vh;
 
   .logo {
     .logo__two{
+
+      p {
+        margin-top: $margin--top--1x;
+      }
       // justify-content: space-between;
       .essen__logo__tile {
         width: 33vw;
@@ -735,6 +782,12 @@ $margin--top--1440--2x: 12vh;
   }
 
   .composition {
+    .composition__one{
+      .description{
+        margin-top: -20px;
+      }
+
+    }
     .composition__two {
       .outdoor__ad__box__one{
         display: flex;
@@ -806,10 +859,8 @@ $margin--top--1440--2x: 12vh;
 
   .fonts {
     .fonts__one {
-      ol {
-        padding-left: 7vw;
-        width: 70vw;
-
+      h3 {
+        margin-top: $margin--top--1x;
       }
     }
     .fonts__two,
@@ -845,7 +896,7 @@ $margin--top--1440--2x: 12vh;
 
     .fonts__six {
       .txt__big {
-        padding-top: 10vh;
+        padding-top: 4vh;
         .txt__big__left{
           p {
             font-size: 80px;
@@ -903,12 +954,13 @@ $margin--top--1440--2x: 12vh;
   }
 
   .graphics {
+    padding-bottom: 9vh;
     .graphics__two {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
 
-      margin-top: $margin--top--2x;
+      margin-top: $margin--top--1x;
       margin-left: auto;
       margin-right: auto;
       width: 90vw;
@@ -930,7 +982,17 @@ $margin--top--1440--2x: 12vh;
     }
 
     .graphics__three {
+       h1 {
+         padding-top: $margin--top--2x;
+       }
       p {
+        padding-top: 0;
+        margin-top: $margin--top--1x;
+        font-size: 18px;
+      }
+      p:nth-of-type(2) {
+        padding-top: 0;
+        margin-top: $margin--top--2x;
         font-size: 18px;
       }
     }
@@ -962,6 +1024,7 @@ $margin--top--1440--2x: 12vh;
 
 @media (min-width: 1024px) {
   .conception{
+    padding-bottom: 12vh;
     .conception__div{
       p {
         font-size: 64px;
@@ -978,12 +1041,15 @@ $margin--top--1440--2x: 12vh;
       .essen__logo__black__v1,
       .essen__logo__black__v2__v3 {
         width: 45vw;
-        margin-top: $margin--top--1440--2x;
+        margin-top: $margin--top--1x;
 
       }
     }
 
     .logo__two {
+      p {
+        margin-top: $margin--top--2x;
+      }
       .essen__logo__tile__div {
         margin-top:$margin--top--1440--2x;
       }
@@ -1000,8 +1066,13 @@ $margin--top--1440--2x: 12vh;
       margin-left: auto;
       margin-right: auto;
       width: 90vw;
+
+      padding-bottom: 10vh;
+
       .essen__logo__wrong{
+
         width: 22vw;
+        margin-top: 4vh;
         padding: 3vw;
       }
     }
@@ -1087,15 +1158,17 @@ $margin--top--1440--2x: 12vh;
     }
 
     .fonts__six {
+      padding-bottom: 14vh;
+
       .txt__big{
         .txt__big__left{
           p {
-            font-size: 143px;
+            font-size: 133px;
           }
         }
         .txt__big__right {
           p {
-            font-size: 143px;
+            font-size: 133px;
           }
 
           p:nth-of-type(2) {
@@ -1139,30 +1212,40 @@ $margin--top--1440--2x: 12vh;
   }
 
   .graphics {
+    padding-bottom: 13vh;
     .graphics__two {
       justify-content: start;
+      margin-top: $margin--top--2x;
       div {
         width: 30vw;
         .outdoor__ad {
-          width: 20vw;
+          width: 30vw;
         }
       }
       div:nth-of-type(2) {
-        margin-left: 5vw;
+        margin-left: 10vw;
       }
     }
 
     .graphics__three {
-      margin-top: $margin--top--1440--2x;
+      margin-top: $margin--top--2x;
+      .graphics__columns__color {
+        margin-top: $margin--top--1x;
+      }
+
       p {
         font-size: 22px;
-        margin-top: $margin--top--1440--2x
+        margin-top: $margin--top--2x;
+        padding-bottom: $margin--top--x;
       }
     }
   }
 
   .photo {
     .photo__one {
+      p {
+        margin-top: $margin--top--1x;
+      }
       p:nth-of-type(2) {
         padding-left: 25vw;
         width: 50vw;
@@ -1170,9 +1253,16 @@ $margin--top--1440--2x: 12vh;
 
       .essen__photo__blueprint {
         width: 50vw;
+        margin-top: 12vh;
       }
 
 
+    }
+
+    .photo__two {
+      .photo__food {
+        margin-top: 2vh;
+      }
     }
   }
 
