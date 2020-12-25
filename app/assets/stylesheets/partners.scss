@@ -1,6 +1,20 @@
 // Place all the styles related to the partners controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@font-face {
+  font-family: "GlyphWorld-Meadow";
+  src: url("GlyphWorld-Meadow.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GlyphWorld-Mountain";
+  src: url("GlyphWorld-Mountain.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Base&Bloom";
+  src: url("Base&Bloom-Base&Bloom-Trial.ttf") format("truetype");
+}
 
 
 body {
