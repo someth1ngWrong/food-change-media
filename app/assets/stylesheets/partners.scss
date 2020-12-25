@@ -87,7 +87,11 @@ body {
 }
 
 .partners__advantages {
-  background: var(--main-white);
+  background: var(--main-yellow);
+
+  .partners__advantages__section {
+    background: var(--main-white);
+  }
 
   h1 {
     font-family: "Inter";
@@ -152,11 +156,14 @@ body {
         color: var(--main-purple);
       }
     }
+
+    h2:last-child {
+      padding-bottom: 24%;
+    }
   }
 }
 
 .partners__form {
-  padding-bottom: 5vh;
   background: var(--main-purple);
 
   h1 {
@@ -168,6 +175,7 @@ body {
     letter-spacing: -0.03em;
     text-align: left;
     padding: 7%;
+    padding-top: 14%;
   }
 
   p {
@@ -236,6 +244,10 @@ body {
         -moz-hyphens: none;
         -ms-hyphens: none;
       }
+
+      h2:last-child {
+        padding-bottom: 14%;
+      }
     }
 
     h3 {
@@ -244,7 +256,7 @@ body {
     }
 
     p {
-      padding: 0 7% 16% 7%;
+      padding: 0 7% 14% 7%;
       -webkit-hyphens: none;
       -moz-hyphens: none;
       -ms-hyphens: none;
@@ -260,12 +272,13 @@ body {
       line-height: 98px;
       letter-spacing: -0.055em;
       text-align: left;
-      padding: 7% 5% 5% 7%;
+      padding: 12% 5% 7% 7%;
     }
 
     p {
-      width: 60vw;
-      font-size: 18px;
+      width: auto;
+      font-size: 44px;
+      line-height: 48px;
     }
   }
 }
@@ -328,23 +341,18 @@ body {
         -moz-hyphens: auto;
         -ms-hyphens: auto;
       }
-    }
-  }
-  //
-  // .partners__advantages :last-child {
-  //   padding-bottom: 8%;
-  // }
 
-  .partners__form {
-    p {
-      font-size: 22px;
+      h2:last-child {
+        padding-bottom: 12%;
+      }
     }
   }
+
 }
 
 @media (min-width: 1280px) {
   .partners__header {
-    height: 105vh;
+    height: 110vh;
 
     .logo_bw_a {
       margin: 2%;
@@ -366,25 +374,35 @@ body {
   }
 
   .partners__advantages {
+
+    .partners__advantages__div {
+      margin-top: -33%;
+
+      h2:last-child {
+        padding-bottom: 5%;
+      }
+    }
     .partners__advantages__section {
       padding-bottom: 6%;
 
       h1 {
-        padding: 7% 0% 8% 7%;
+        padding: 7% 0% 26% 7%;
       }
     }
 
     h3 {
-      padding: 0% 7% 5% 7%;
+      padding: 9% 7% 4.5% 7%;
     }
 
     p {
       width: 80vw;
       padding-bottom: 14%;
     }
+  }
 
-    .partners__advantages__div {
-      margin-top: -16%;
+  .partners__form {
+    h1 {
+      padding: 9% 7% 4.5% 7%;
     }
   }
 
@@ -416,46 +434,71 @@ body {
     }
   }
 
-  // .partners__advantages {
-    // h1 {
-    //   font-size: 143px;
-    //   line-height: 91%;
-    //
-    //   padding: 9% 7% 2% 7%;
-    // }
-
-    // .partners__advantages__div {
-      // h2 {
-      //   font-size: 64px;
-      //   line-height: 112%;
-      //
-      //   width: 82vw;
-      //
-      //   margin: 5% 0;
-      // }
-
-    //   .partners__advantages__div :last-child {
-    //     margin-bottom: 12%;
-    //   }
-    // }
-  // }
-
   .partners__form {
     h1 {
       font-size: 143px;
       line-height: 91%;
 
-      padding: 9% 7% 2% 7%;
+      padding: 9% 7% 4.5% 7%;
     }
 
     p {
-      width: 50vw;
-      padding: 3% 7% 0 7%;
+      width: 90vw;
+      font-size: 52px;
+      line-height: 124%;
     }
   }
 
-  .partners__advantages h3 {
-    width: 80vw;
+  .partners__advantages {
+
+    .partners__advantages__section {
+      padding-bottom: 0;
+    }
+
+    h3 {
+      width: 80vw;
+      padding: 9% 7% 4.5% 7%;
+    }
+
+    p {
+      width: 90vw;
+      font-size: 52px;
+      line-height: 124%;
+    }
+
+    .partners__advantages__div {
+      > h2 {
+        font-size: 52px;
+        line-height: 124%;
+      }
+
+      h2:last-child {
+        padding-bottom: 14%;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1600px) {
+  .partners__header {
+    p {
+      top: 51vh;
+    }
+    a {
+      top: 71vh;
+    }
+  }
+
+  .partners__advantages {
+    .partners__advantages__div {
+      margin-top: -27%;
+    }
+    .partners__advantages__section {
+      h1 {
+        padding: 7% 0% 21% 7%;
+      }
+    }
   }
 
 }

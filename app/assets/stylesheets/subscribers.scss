@@ -16,7 +16,8 @@
 }
 
 
-.new_subscriber{
+.new_subscriber {
+  padding-bottom: 24%;
   #subscriber_email{
     @include mailer;
     font-size: 14px;
@@ -49,27 +50,30 @@
   }
 
   .new_subscriber {
+    padding-bottom: 14%;
     input {
       font-size: 18px;
+      height: 18vh;
     }
 
     #subscriber_email {
       @include mailer;
       font-size: 18px;
+      height: 18vh;
     }
   }
 }
 
 @media (min-width: 1024px) {
   .new_subscriber {
-    padding-bottom: 5%;
+    padding-bottom: 12%;
     #subscriber_email {
       @include mailer;
-      height: 20vh;
+      height: 23vh;
       font-size: 22px;
     }
     input {
-      height: 20vh;
+      height: 23vh;
       font-size: 22px;
     }
   }
@@ -77,14 +81,14 @@
 
 @media (min-width: 1280px) {
   .new_subscriber {
-    padding-bottom: 7%;
+    padding-bottom: 14%;
     #subscriber_email {
       @include mailer;
-      height: 25vh;
+      height: 28vh;
       font-size: 22px;
     }
     input {
-      height: 25vh;
+      height: 28vh;
       font-size: 22px;
     }
   }
@@ -93,6 +97,7 @@
 
 @media (min-width: 1440px) {
   .new_subscriber {
+    padding-bottom: 14%;
     #subscriber_email {
       @include mailer;
       height: 30vh;
