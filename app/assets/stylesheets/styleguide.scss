@@ -41,7 +41,7 @@ $margin--top--1440--2x: 12vh;
     @if $type_of_tag == h1 {
       font-size: 54px;
       font-weight: 500;
-      letter-spacing: -0.1em;
+      letter-spacing: -0.05em;
       text-transform: uppercase;
 
       padding-top: 6vh;
@@ -109,7 +109,7 @@ $margin--top--1440--2x: 12vh;
     @if $type_of_tag == h1 {
       font-size: 64px;
       font-weight: 500;
-      letter-spacing: -0.1em;
+      letter-spacing: -0.05em;
       text-transform: uppercase;
 
       padding-top: 6vh;
@@ -289,16 +289,18 @@ $margin--top--1440--2x: 12vh;
       h1 {
         font-size: 14px;
         text-transform: uppercase;
+        font-weight: 500;
 
-        padding-top: 3vw;
-        padding-left: 3vw;
+        padding-top: 5%;
+        padding-left: 5%;
       }
 
       p {
         font-size: 12px;
         margin-top: 10px;
 
-        padding-left: 3vw;
+        padding-left: 5%;
+        font-weight: 500;
       }
     }
 
@@ -1029,11 +1031,15 @@ $margin--top--1440--2x: 12vh;
       p {
         font-size: 64px;
         width: 90vw;
+        margin-top: 8vh;
+
       }
     }
   }
 
   .logo {
+    padding-top: 4vw;
+
     .logo__one {
       h3 {
       }
@@ -1079,6 +1085,8 @@ $margin--top--1440--2x: 12vh;
   }
 
   .colors {
+    padding-top: 4vw;
+
     .colors__two {
       width: 100vw;
       div {
@@ -1097,6 +1105,8 @@ $margin--top--1440--2x: 12vh;
   }
 
   .composition {
+    padding-top: 4vw;
+
     .composition__one {
       .description {
         padding-left: 25vw;
@@ -1121,6 +1131,8 @@ $margin--top--1440--2x: 12vh;
   }
 
   .fonts {
+    padding-top: 4vw;
+
     .fonts__two {
       // margin-top: 15vw;
       .fonts__box__left {
@@ -1158,6 +1170,8 @@ $margin--top--1440--2x: 12vh;
     }
 
     .fonts__six {
+      padding-top: 4vw;
+
       padding-bottom: 14vh;
 
       .txt__big{
@@ -1212,6 +1226,8 @@ $margin--top--1440--2x: 12vh;
   }
 
   .graphics {
+    padding-top: 4vw;
+
     padding-bottom: 13vh;
     .graphics__two {
       justify-content: start;
@@ -1233,6 +1249,11 @@ $margin--top--1440--2x: 12vh;
         margin-top: $margin--top--1x;
       }
 
+      p:nth-of-type(2) {
+        font-size: 22px;
+        margin-top: 12vh;
+      }
+
       p {
         font-size: 22px;
         margin-top: $margin--top--2x;
@@ -1242,6 +1263,8 @@ $margin--top--1440--2x: 12vh;
   }
 
   .photo {
+    padding-top: 4vw;
+
     .photo__one {
       p {
         margin-top: $margin--top--1x;
@@ -1261,10 +1284,97 @@ $margin--top--1440--2x: 12vh;
 
     .photo__two {
       .photo__food {
+        margin-top: 3vh;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .conception {
+    padding-bottom: 12vh;
+    .conception__div{
+      p {
+        margin-top: 8vh;
+      }
+
+    }
+  }
+
+  .logo{
+    padding-top: 4vw;
+  }
+
+  .colors {
+    padding-top: 4vw;
+  }
+
+  .composition{
+    padding-top: 4vw;
+    padding-bottom: 12vw;
+    .composition__two{
+      p{
+        margin-top: 2vh;
+      }
+    }
+    .composition__three{
+      p{
         margin-top: 2vh;
       }
     }
   }
+
+  .fonts {
+    padding-top: 4vw;
+    .fonts__one{
+
+      h3 {
+        margin-top: 8vh;
+      }
+      p {
+        margin-top: 3vh;
+      }
+    }
+
+    .fonts__six {
+      padding-top: 4vw;
+    }
+  }
+
+  .graphics {
+    padding-top: 4vw;
+
+    .graphics__two {
+      p {
+        margin-top: 2vh;
+      }
+    }
+    .graphics__three{
+      p {
+        margin-top: 8vh;
+    padding-bottom: 3vh;
+      }
+      p:nth-of-type(2) {
+        margin-top: 12vh;
+      }
+      .graphics__columns__color{
+            margin-top: 6vh;
+      }
+    }
+  }
+
+  .photo {
+    padding-top: 4vw;
+
+    .photo__two {
+      .photo__food{
+        margin-top: 3vh;
+      }
+
+    }
+  }
+
 
 
 
