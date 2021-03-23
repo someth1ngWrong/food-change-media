@@ -25,6 +25,7 @@
   </head>
 
   <body>
+    <%= react_component 'Tests' %>
     <div class="top_menu">
       <%= image_tag 'logo-bw', class: 'top_menu__logo'%>
       <% Category.where(display_in_navbar: true).each do |cat| %>
@@ -36,8 +37,8 @@
       <% else %>
       <%= link_to 'Войти', new_user_session_path || new_admin_session_path %>  <%= link_to 'Зарегистрироваться', new_user_registration_path || new_admin_registration_path %>
       <% end %>
-
     </div>
+
     <% if notice %>
     <p class="notice"><%= notice %></p>
     <% elsif alert %>
