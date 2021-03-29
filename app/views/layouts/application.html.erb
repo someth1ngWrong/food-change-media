@@ -25,7 +25,10 @@
   </head>
 
   <body>
-    <%= react_component 'Tests' %>
+
+    <%= react_component 'O_HeaderMobile' %>
+    <!-- <div id="root"></div> -->
+
     <div class="top_menu">
       <%= image_tag 'logo-bw', class: 'top_menu__logo'%>
       <% Category.where(display_in_navbar: true).each do |cat| %>

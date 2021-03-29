@@ -1,25 +1,28 @@
 import React from "react"
-import {
-  MHeaderIcons,
-  MCategoryFood,
-  MFilter
-} from "components";
-import styles from "./OHeaderMobile.module.scss";
+import PropTypes from "prop-types"
+import A_Logo from './A_Logo'
+import M_HeaderIcons from './M_HeaderIcons'
+import M_CategoryFood from './M_CategoryFood'
+import M_Filter from './M_Filter'
 
-const OHeaderMobile = () => {
-  return (
-    <div className={styles.oHeaderMobile}>
-      <div className={styles.flexWrapperTwo}>
-        <img
-          alt=""
-          src="https://static.overlay-tech.com/assets/6ebbe0df-9cee-43c2-8ab9-82ad162e0f2e.svg"
-        />
-        <MHeaderIcons />
+
+
+class O_HeaderMobile extends React.Component {
+  render () {
+    return (
+      <div>
+        <A_Logo />
+        <M_HeaderIcons />
+        <M_CategoryFood />
+        <M_Filter />
       </div>
-      <MCategoryFood className={styles.mCategoryFood} />
-      <MFilter className={styles.mFilter} />
-    </div>
-  );
-};
+    );
+  }
+}
 
-export default OHeaderMobile;
+export default O_HeaderMobile
+
+// ReactDOM.render(
+//     <O_HeaderMobile />,
+//   document.getElementById('root')
+// );
