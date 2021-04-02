@@ -1,0 +1,37 @@
+.logo-image {
+  height: 25px;
+  // width: 30%;
+}
+
+.navbar-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.nav-options-block {
+  overflow: auto;
+  white-space: nowrap;
+  // padding: 10px;
+  display: flex;
+  .nav-option {
+    padding: 15px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.action-container {
+  display: flex;
+  .action {
+    padding: 0 10px;
+  }
+}
+
+.option-image {
+
+
+}
