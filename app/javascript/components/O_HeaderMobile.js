@@ -11,8 +11,16 @@ class O_HeaderMobile extends React.Component {
   render () {
     return (
       <div>
-        <A_Logo />
-        <M_HeaderIcons />
+        <div className="navbar-container">
+          <div className="navbar-block">
+            <div className="logo-container">
+              <A_Logo />
+            </div>
+            <div className="action-container">
+              <M_HeaderIcons />
+            </div>
+          </div>
+        </div>
         <M_CategoryFood />
         <M_Filter />
       </div>
