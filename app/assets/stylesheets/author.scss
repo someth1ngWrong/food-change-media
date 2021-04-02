@@ -1,0 +1,87 @@
+.main-author-screen {
+  .author-main-label {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 56px;
+  }
+
+  .author-short-desc {
+    font-family: Inter;
+    font-size: 16px;
+    color: #6C6BCF;
+  }
+
+  .author-long-desc {
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 2rem 0;
+
+  }
+
+  .img-title {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .img-label {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #9AA1A5;
+  }
+
+  .img-info {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #272727;
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+
+  .map-details-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #E0E2E8;
+    padding: 1rem 0;
+  }
+
+  .map-detail {
+    font-family: Inter;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 7px;
+  }
+
+  .main-label-conainer {
+    display: flex;
+    margin-bottom: 1rem;
+
+  }
+
+  .main-author-text {
+    color: #6C6BCF;
+    font-size: 12px;
+    margin-bottom: 1.3rem;
+  }
+
+  .author-spacing {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .main-map-container > div > div {
+    max-height: 400px;
+    max-width: 90%;
+  }
+}

@@ -34,4 +34,6 @@ Rails.application.routes.draw do
   get 'admins', to: 'admins#index'
   get 'admins/:id' => 'admins#show', :as => :admin
   delete 'admins/:id', to: 'admins#destroy'
+
+  get 'author', to: 'author#index'
 end

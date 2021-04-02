@@ -15,7 +15,8 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   .card-block {
-    width: 165px;
+    min-width: 165px;
+    max-width: 47%;
     display: flex;
     justify-content: center;
     align-items: center;
