@@ -4,7 +4,7 @@ import A_Logo from './A_Logo'
 import M_HeaderIcons from './M_HeaderIcons'
 import M_CategoryFood from './M_CategoryFood'
 import M_Filter from './M_Filter'
-
+import Main from './main/Main'
 
 
 class O_HeaderMobile extends React.Component {
@@ -15,6 +15,8 @@ class O_HeaderMobile extends React.Component {
         <M_HeaderIcons />
         <M_CategoryFood />
         <M_Filter />
+        <hr/>
+        <Main/>
       </div>
     );
   }

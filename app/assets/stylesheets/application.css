@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
  .top_menu {
    font-family: "Inter";
    font-size: 18px;
@@ -43,3 +44,222 @@
  .top_menu a:hover {
    color: #414141;
  }
+.home-title{
+   margin-left: 15px;
+}
+.home-title > h2{
+   position: static;
+   left: 0%;
+   right: -6.54%;
+   top: 0%;
+   bottom: 0%;
+   font-family: Inter;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 36px;
+   line-height: 36px;
+   letter-spacing: -0.07em;
+   text-transform: uppercase;
+   color: #272727;
+}
+.top{
+   margin-left: 15px;
+}
+.card{
+   display: flex;
+   margin-top: 12px;
+}
+.card-1{
+   display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    position: relative;
+    width: 158px;
+    height: 215px;
+    left: 15px;
+    background: #AD99E5;
+    border-radius: 12px;
+}
+.card-image-1{
+   position: static;
+   left: 7.59%;
+   right: 6.33%;
+   top: 5.58%;
+   bottom: 31.16%;
+
+   background: url(Group 2984.png);
+
+   /* Inside Auto Layout */
+
+   flex: none;
+   order: 0;
+   flex-grow: 0;
+   margin: 8px 0px;
+}
+.card-description{
+   position: static;
+left: 7.59%;
+right: 6.33%;
+top: 72.56%;
+bottom: 5.12%;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 8px 0px;
+}
+.card-description-1{
+   position: absolute;
+    left: 7%;
+    right: 0%;
+    /* top: 84%; */
+    bottom: 0%;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 60px;
+    color: #EFEFEF;
+}
+.card-2{
+   display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    position: relative;
+    width: 158px;
+    height: 215px;
+    background: #F0C00E;
+    border-radius: 12px;
+    left: 7%;
+}
+.card-image-2{
+   position: static;
+   left: 7.59%;
+   right: 6.33%;
+   top: 5.58%;
+   bottom: 31.16%;
+
+   background: url(Union.png);
+
+   /* Inside Auto Layout */
+
+   flex: none;
+   order: 0;
+   flex-grow: 0;
+   margin: 8px 0px;
+}
+.card-description-2{
+   position: absolute;
+    left: 7%;
+    right: 0%;
+    /* top: 84%; */
+    bottom: 0%;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 60px;
+    color: #EFEFEF;
+}
+.title-2{
+   left: 5%;
+    /* right: -6.54%; */
+    top: 63%;
+    bottom: 0%;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 82px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #272727;
+}
+.description-3{
+   position: absolute;
+   width: 375px;
+   height: 2598px;
+   left: 583px;
+   top: 115px;
+   overflow-y: scroll;
+
+   background: #EFEFEF;
+   border: 11px solid #272727;
+   border-radius: 12px;
+}
+.recipe-card{
+   display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding: 24px 24px 24px 32px;
+
+position: static;
+width: 344px;
+height: 368px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+border-radius: 15.4884px;
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 16px 0px;
+}
+.recipe-card-section-1{
+   display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0px;
+    position: static;
+    width: 288px;
+    height: 218px;
+    left: 32px;
+    top: 24px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+.recipe-card-section-2{
+   display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: static;
+    width: 288px;
+    height: 56.85px;
+    left: 0px;
+    top: 0px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 14px 0px;
+}
+.recipe-time{
+   display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    position: static;
+    left: 0%;
+    right: 0%;
+    top: -2%;
+    bottom: 0%;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 11px -6.4053px;
+}
