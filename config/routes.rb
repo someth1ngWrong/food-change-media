@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   devise_scope :user do
       get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  
+
   # resources :posts
   resources :subscribers
 
@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   get 'about', to: 'about#index'
   get 'welcome', to: 'welcome#index'
+  get 'all_collections', to: 'all_collections#index'
   get 'landing/index', to: 'landing#index'
   get 'partners/index', to: 'partners#index'
   get 'styleguide', to: 'styleguide#index'
@@ -33,4 +34,6 @@ Rails.application.routes.draw do
   get 'admins', to: 'admins#index'
   get 'admins/:id' => 'admins#show', :as => :admin
   delete 'admins/:id', to: 'admins#destroy'
+
+  get 'author', to: 'author#index'
 end

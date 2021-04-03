@@ -22,6 +22,8 @@
     <%= javascript_include_tag Ckeditor.cdn_url %>
     <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js' %>
     <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.min.js' %>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
   </head>
 
   <body>
@@ -29,7 +31,7 @@
     <%= react_component 'O_HeaderMobile' %>
     <!-- <div id="root"></div> -->
 
-    <div class="top_menu">
+    <!-- <div class="top_menu">
       <%= image_tag 'logo-bw', class: 'top_menu__logo'%>
       <% Category.where(display_in_navbar: true).each do |cat| %>
       <%= link_to cat.name, posts_path(category: cat.name) %>
@@ -40,7 +42,7 @@
       <% else %>
       <%= link_to 'Войти', new_user_session_path || new_admin_session_path %>  <%= link_to 'Зарегистрироваться', new_user_registration_path || new_admin_registration_path %>
       <% end %>
-    </div>
+    </div> -->
 
     <% if notice %>
     <p class="notice"><%= notice %></p>

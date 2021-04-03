@@ -8,15 +8,23 @@ class M_CategoryFood extends React.Component {
   render () {
     return (
       <div className='M_CategoryFood'>
-        <ul>
-          <A_TextCaption name="Закуски" />
-          <A_TextCaption name="Завтраки" />
-          <A_TextCaption name="Салаты" />
-          <A_TextCaption name="Супы" />
-          <A_TextCaption name="Основные блюда" />
-          <A_TextCaption name="Напитки" />
-          <A_TextCaption name="Десерты" />
-        </ul>
+        <div className="nav-options-block">
+          <div className="nav-option">
+            <A_TextCaption name="Закуски" />
+          </div>
+          <div className="nav-option">
+            <A_TextCaption name="Завтраки"/>
+          </div>
+          <div className="nav-option">
+            <A_TextCaption name="Салаты"/>
+          </div>
+          <div className="nav-option">
+            <A_TextCaption name="Супы"/>
+          </div>
+          <div className="nav-option">
+            <A_TextCaption name="Основные блюда"/>
+          </div>
+        </div>
       </div>
     );
   }
