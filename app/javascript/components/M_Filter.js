@@ -10,7 +10,7 @@ class M_Filter extends React.Component {
   render (src) {
     return (
       <div>
-        <p>Я ЕМ</p>
+        <p>Я ем</p>
         <A_IconOmnivore />
         <A_IconPescetarian />
         <A_IconVegan />
