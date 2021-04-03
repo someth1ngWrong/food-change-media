@@ -5,7 +5,9 @@ import ImageEgg from 'images/image_egg.png'
 import ImageDishFour from 'images/dish_4.png'
 import ImageDishFive from 'images/dish_5.png'
 import ImageDishSix from 'images/dish_6.png'
-import OFooter from '../components/OFooter'
+import A_TextTitle from './A_TextTitle'
+import M_Collection from './M_Collection'
+import O_Footer from './O_Footer'
 
 
 
@@ -27,25 +29,12 @@ const AllCollections = () => {
   return (
     <>
       <div className="cards-container">
-        <div className="recipe-title">
-          <h1>пOдбopКи</h1>
-        </div>
+        <A_TextTitle title="пOдбopКи" />
         <div className="card-row-block">
-          {
-            data.map((card) => {
-              return(
-                <div className="card-block" style={{ background: card.backgroundColor}}>
-                  <div className="card-image-block">
-                    <img src={card.image} className="card-image"/>
-                  </div>
-                  <div className="card-name">{card.name}</div>
-                </div>
-              )
-            })
-          }
+          {data.map((card) => <M_Collection card={card} />)}
         </div>
       </div>
-      <OFooter/>
+      <O_Footer/>
     </>
   )
 }

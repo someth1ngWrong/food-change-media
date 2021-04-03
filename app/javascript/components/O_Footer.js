@@ -1,7 +1,7 @@
 import React from 'react'
 import FooterLogo from 'images/footer_logo.svg'
 
-const OFooter = () => {
+const O_Footer = () => {
   return (
     <div class="footer-container">
       <div class="footer-logo">
@@ -28,4 +28,4 @@ const OFooter = () => {
   )
 }
 
-export default OFooter
+export default O_Footer

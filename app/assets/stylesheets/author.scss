@@ -4,6 +4,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 56px;
+    margin-left: 0.5rem;
   }
 
   .author-short-desc {
@@ -14,8 +15,12 @@
 
   .author-long-desc {
     font-family: Inter;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 16px!important;
+    line-height: 24px!important;
+    a {
+      text-decoration: none;
+      color: #000!important
+    }
     margin: 2rem 0;
 
   }
@@ -42,9 +47,11 @@
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 16px!important;
     line-height: 24px;
-    color: #272727;
+    a{
+      color: #272727!important;
+    }
     margin-top: 5px;
     margin-bottom: 25px;
   }
@@ -52,7 +59,6 @@
   .map-details-container {
     display: flex;
     align-items: center;
-    border-bottom: 2px solid #E0E2E8;
     padding: 1rem 0;
   }
 
@@ -83,5 +89,18 @@
   .main-map-container > div > div {
     max-height: 400px;
     max-width: 90%;
+  }
+
+  .author-counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    position: absolute;
+    right: 12px;
+    bottom: -100px;
+    background: #9897DE;
+    border-radius: 4px;
   }
 }
